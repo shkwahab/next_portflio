@@ -26,7 +26,7 @@ const BlogCard:FC<Props> =({article})=> {
                     {article.map((article)=>{
                         return   <Link href={article.slug} key={article.id} className="p-4 md:w-1/3">
                             <div className="h-full  dark:bg-white border-opacity-60 rounded-lg overflow-hidden">
-                                <Image width={100} height={192} className="lg:h-48 md:h-36 w-full object-cover object-center"
+                                <img  className="lg:h-48 md:h-36 w-full object-cover object-center"
                                      src={article.featured} alt={article.title}/>
                                 <div className="p-6 border-[1px]  border-gray-400 border-t-0 rounded-b-lg dark:border-none">
                                     <h3 className="tracking-widest text-xs title-font font-medium dark:text-gray-400 text-gray-400  mb-1">{article.categories}</h3>
