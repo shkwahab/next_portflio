@@ -57,7 +57,7 @@ const WorkSamples: FC<Props> = ({work}) => {
                                                 <h2 className="text-lg text-white font-bold mb-4">
                                                     {worksamples.projectName}
                                                 </h2>
-                                                <p className="text-base text-white">
+                                                <p className="text-base p-2 text-white">
                                                     {worksamples.shortDescription}
                                                 </p>
                                             </div>
