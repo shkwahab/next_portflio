@@ -43,7 +43,7 @@ const WorkSamples: FC<Props> = ({work}) => {
                                 key={worksamples.id}
                                 className="xl:w-1/3 md:w-1/2 w-11/12 my-4 p-4 md:mx-0 mx-auto"
                             >
-                                <Link href={worksamples.projectLink}>
+                                <Link target={"_blank"} href={worksamples.projectLink}>
                                     <div className="rounded-lg relative dark:bg-white">
                                         <div className="h-80 rounded-lg overflow-hidden">
                                             <Image
