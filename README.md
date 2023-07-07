@@ -16,7 +16,7 @@ ContentFul Cms with GraphQL
 React Github Icons
 
 ```bash
-yarn add -D react-icons
+yarn add react-icons
 ```
 ## Getting Started
 
