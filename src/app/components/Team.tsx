@@ -43,7 +43,7 @@ const Team: FC<Props> = ({team}, element: JSX.Element = <><>
                                 <h2 className="title-font font-medium text-xl mb-2 text-gray-900">{team.username}</h2>
                                 <h3 className="text-gray-800 mb-3">{team.role}</h3>
                                 <p className="mb-4">{team.bio}</p>
-                                <div className="flex items-center">
+                                <div className="flex items-center justify-center md:justify-normal">
                                     <Link className={`mx-2`} href={team.linkedin }>
                                         <FaLinkedinIn className={`text-xl dark:text-white`}/>
                                     </Link><Link className={`mx-2`} href={team.facebook }>
