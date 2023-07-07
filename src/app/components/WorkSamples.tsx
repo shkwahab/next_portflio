@@ -8,12 +8,9 @@ type WorkSample = {
     projectName: string,
     projectLink: string,
     shortDescription: string,
-    featured: {
-        url: string
-    }
-    sys: {
-        id: string
-    }
+    featured:string
+    id:string
+
 }
 
 interface Props {
@@ -43,7 +40,7 @@ const WorkSamples: FC<Props> = ({work}) => {
                     {work.map((worksamples) => {
                         return (
                             <div
-                                key={worksamples.sys.id}
+                                key={worksamples.id}
                                 className="xl:w-1/3 md:w-1/2 w-11/12 my-4 p-4 md:mx-0 mx-auto"
                             >
                                 <Link href={worksamples.projectLink}>
@@ -53,7 +50,7 @@ const WorkSamples: FC<Props> = ({work}) => {
                                                 width={720}
                                                 height={400}
                                                 className={`${imgZoom?"scale-125 object-cover":""} transition-all duration-500 `}
-                                                src={worksamples.featured.url}
+                                                src={worksamples.featured}
                                                 alt="content"
                                             />
                                             <div onMouseEnter={Zoom} onMouseLeave={UnZoom}  className="absolute inset-0 bg-black bg-opacity-30 rounded-lg opacity-0 flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-100 focus:opacity-100">

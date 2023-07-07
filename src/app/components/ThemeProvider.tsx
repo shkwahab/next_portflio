@@ -6,62 +6,72 @@ import Footer from '@/app/components/Footer';
 
 interface Props {
     children: ReactNode;
-    SPACE_ID: any
-    DELIVERY_TOKEN: any
+    SPACE_ID: any;
+    DELIVERY_TOKEN: any;
 }
 
+const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
 
+    const [company, setCompany] = useState<any>(null);
 
-const ThemeProvider: FC<Props> = ({ children,SPACE_ID,DELIVERY_TOKEN }) => {
-    const data= async () => {
-        const timestamp = Date.now().toString();
-        const result = await fetch(
-            `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-            {
-                method: 'POST',
-                headers: {
-                    Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                    'Content-Type': 'application/json',
-                    'Cache-Control': 'no-cache',
-                },
-                body: JSON.stringify({
-                    query: `
-          query companyEntryQuery${timestamp} {
-            company(id: "79BcPAv3ISMtIRQtiU7r0p") {
-              sys {
-                id
-              }
-              name
-              github
-              linkedin
-              facebook
-              instagram
-            }
-          }
-        `,
-                }),
-            }
-        );
-        if (!result.ok) {
-            console.error(result);
-            return {};
-        }
-        const { data } = await result.json();
-        const response = data.company;
-        return response;
-    };
-    const [company, setCompany] = useState<any>("");
     useEffect(() => {
-        data().then((data) => {
-            setCompany(data);
-        });
-    }, []);
+        const fetchData = async () => {
+            try {
+
+
+
+                const timestamp = Date.now().toString();
+                const result = await fetch(
+                    `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            Authorization: `Bearer ${DELIVERY_TOKEN}`,
+                            'Content-Type': 'application/json',
+                            'Cache-Control': 'no-cache',
+                        },
+                        body: JSON.stringify({
+                            query: `
+                query companyEntryQuery${timestamp} {
+                  company(id: "79BcPAv3ISMtIRQtiU7r0p") {
+                    sys {
+                      id
+                    }
+                    name
+                    github
+                    linkedin
+                    facebook
+                    instagram
+                  }
+                }
+              `,
+                        }),
+                    }
+                );
+
+                if (!result.ok) {
+                    console.error(result);
+                    return {};
+                }
+
+                const { data } = await result.json();
+                const response = data.company;
+                setCompany(response);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+
+// alert(testResult)
+    }, [SPACE_ID, DELIVERY_TOKEN]);
+
 
     const socialIcons = {
-        facebook:company.facebook || "",
-        instagram:company.instagram || "",
-        linkedin: company.linkedin || "",
-        github: company.github || "",
+        facebook: company?.facebook || '',
+        instagram: company?.instagram || '',
+        linkedin: company?.linkedin || '',
+        github: company?.github || '',
     };
 
     return (
@@ -70,30 +80,36 @@ const ThemeProvider: FC<Props> = ({ children,SPACE_ID,DELIVERY_TOKEN }) => {
                 siteTitle="Code Brothers"
                 category={[
                     {
-                        id: "1",
-                        title: "Blog",
-                        href: "/blog",
+                        id: '1',
+                        title: 'Blog',
+                        href: '/blog',
                     },
                     {
-                        id: "2",
-                        title: "Portfolio",
-                        href: "/portfolio",
+                        id: '2',
+                        title: 'Portfolio',
+                        href: '/portfolio',
                     },
                     {
-                        id: "3",
-                        title: "Services",
-                        href: "/services",
+                        id: '3',
+                        title: 'Services',
+                        href: '/services',
                     },
                     {
-                        id: "4",
-                        title: "Themes",
-                        href: "/themes",
+                        id: '4',
+                        title: 'Themes',
+                        href: '/themes',
                     },
                 ]}
             />
 
             {children}
-            <Footer siteTitle={company.name || ""} socialIcons={socialIcons} />
+            {company && (
+                <Footer
+                    siteTitle={company.name}
+                    socialIcons={socialIcons}
+
+                />
+            )}
         </Theme>
     );
 };

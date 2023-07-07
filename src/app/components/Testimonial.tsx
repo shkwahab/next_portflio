@@ -1,29 +1,25 @@
 "use client"
-import React, { FC, useEffect } from 'react';
+import React, {FC, useEffect} from 'react';
 import SwiperCore from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from 'next/image';
-import { Autoplay, Pagination} from "swiper/modules"
+import {Autoplay, Pagination} from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 type Customer = {
-    sys: {
-        id: string;
-    };
+    id: string
     customerName: string;
     customerRole: string;
     review: string;
-    customerPic: {
-        url: string;
-    };
+    customerPic: string
 };
 
 interface Props {
     customers: Customer[];
 }
 
-const Testimonial: FC<Props> = ({ customers }) => {
+const Testimonial: FC<Props> = ({customers}) => {
     return (
         <section className="text-gray-600 body-font bg-gray-300 dark:bg-transparent">
             <div className="container px-5 py-24 mx-auto">
@@ -42,23 +38,23 @@ const Testimonial: FC<Props> = ({ customers }) => {
                         speed={1000}
                         autoplay={{
                             delay: 2000,
-                            pauseOnMouseEnter:true,
+                            pauseOnMouseEnter: true,
                             disableOnInteraction: false,
                         }}
                         loop={true}
                         navigation={true}
-                        pagination={{ clickable: false,el:".sa" }}
+                        pagination={{clickable: false, el: ".sa"}}
                         className="mySwiper"
                     >
                         {customers.map((customer) => (
-                            <SwiperSlide key={customer.sys.id} className="p-4 md:w-1/2 w-full">
+                            <SwiperSlide key={customer.id} className="p-4 md:w-1/2 w-full">
                                 <div className="h-full bg-gray-100 p-8 rounded">
                                     <div className="grid grid-cols-[.4fr_1fr] ">
                                         <Image
                                             alt="testimonial"
                                             width={100}
                                             height={100}
-                                            src={customer.customerPic.url}
+                                            src={customer.customerPic}
                                             className="rounded-[50%_0_50%_50%] w-32 h-32 flex-shrink-0 object-cover object-center"
                                         />
                                         <span className="flex-grow flex flex-col pl-4">
@@ -82,23 +78,23 @@ const Testimonial: FC<Props> = ({ customers }) => {
                         speed={1000}
                         autoplay={{
                             delay: 2000,
-                            pauseOnMouseEnter:true,
+                            pauseOnMouseEnter: true,
                             disableOnInteraction: false,
                         }}
                         loop={true}
                         navigation={true}
-                        pagination={{ clickable: false,el:".sa" }}
+                        pagination={{clickable: false, el: ".sa"}}
                         className="mySwiper"
                     >
                         {customers.map((customer) => (
-                            <SwiperSlide key={customer.sys.id} className="p-4 md:w-1/2 w-full">
+                            <SwiperSlide key={customer.id} className="p-4 md:w-1/2 w-full">
                                 <div className="h-full bg-gray-100 p-8 rounded">
                                     <div className="grid grid-cols-[.4fr_1fr] ">
                                         <Image
                                             alt="testimonial"
                                             width={60}
                                             height={60}
-                                            src={customer.customerPic.url}
+                                            src={customer.customerPic}
                                             className="rounded-[50%_0_50%_50%] w-20 h-20 flex-shrink-0 object-cover object-center"
                                         />
                                         <span className="flex-grow flex flex-col pl-4">

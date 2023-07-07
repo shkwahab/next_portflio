@@ -8,7 +8,7 @@ This is a Next.js Project with Contentful Cms to make dynamic Portfolio
 TailwindCss
 
 
-ContentFul Cms with GraphQL
+ContentFul Cms 
 
 ## For Icons
 

@@ -3,14 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 type Service = {
-    sys: {
-        id: string;
-    };
+    id: string
     title: string
     slug: string
-    featured: {
-        url: string
-    }
+    featured: string
     description: string
 }
 
@@ -31,13 +27,13 @@ const Services: FC<Props> = ({services}) => {
                 </div>
                 <div className="flex flex-wrap -m-4">
                     {services.map((service) => {
-                        return <div key={service.sys.id} className="xl:w-1/3 md:w-1/2 w-11/12 my-4 p-4 md:mx-0 mx-auto">
+                        return <div key={service.id} className="xl:w-1/3 md:w-1/2 w-11/12 my-4 p-4 md:mx-0 mx-auto">
                             <Link href={service.slug}>
                                 <div
                                     className="rounded-lg bg-white dark:bg-white  ">
                                     <Image width={720} height={400}
                                            className="h-64 rounded-t-lg  w-full object-cover object-center mb-6"
-                                           src={service.featured.url} alt="content"/>
+                                           src={service.featured} alt="content"/>
                                     <div className="p-4">
                                         <h2 className="text-lg text-gray-900 font-medium dark:text-black title-font mb-4">{service.title}</h2>
                                         <p className="leading-relaxed dark:text-black text-base">{service.description}</p>

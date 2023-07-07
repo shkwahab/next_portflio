@@ -1,4 +1,3 @@
-import {Metadata} from 'next'
 import Hero from "@/app/components/Hero";
 import WorkSamples from "@/app/components/WorkSamples";
 import Team from "@/app/components/Team";
@@ -7,211 +6,70 @@ import Testimonial from "@/app/components/Testimonial";
 import BlogCard from "@/app/components/BlogCard";
 import ContactForm from "@/app/components/ContactForm";
 import environments from "@/app/environments";
+import {FetchData, FetchDataLimited} from "@/app/crud";
 
 export default async function Home() {
-    const timestamp = Date.now().toString();
-    const SPACE_ID=environments.SPACE_ID;
-    const DELIVERY_TOKEN=environments.DELIVERY_TOKEN;
-    const SERVICE_ID=environments.SERVICE_ID;
-    const PUBLIC_KEY=environments.PUBLIC_KEY;
-    const TEMPLATE_ID=environments.TEMPLATE_ID;
-    const result = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-                'Cache-Control': 'no-cache',
-            },
-            body: JSON.stringify({
-                query: `
-        query teamCollectionQuery${timestamp} {
-  teamCollection {
-    items {
-      sys {
-        id
-      }
-     profilepic{
-      url
-    }
-      role
-      slug
-      username
-      github
-      facebook
-      linkedinn
-      bio
-    }
-  }
-}
-        `,
-            }),
-        },
-    );
-    const serviceResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-
-            },
-            body: JSON.stringify({
-                query: `query productsCollectionQuery${timestamp} {
-  productsCollection {
-    items {
-      sys {
-        id
-      }
-     title
-     description
-     slug
-     featured{
-      url
-    } 
-    }
-  }
-}`,
-            }),
-        },
-    );
-    const workResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-
-            },
-            body: JSON.stringify({
-                query: `query worksamplesCollectionQuery${timestamp} {
-  worksamplesCollection {
-    items {
-      sys {
-        id
-      }
-     projectName
-      projectLink
-      shortDescription
-      featured{url}
-    }
-  }
-}
-`,
-            }),
-        },
-    );
-    const testimonialResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-
-            },
-            body: JSON.stringify({
-                query: `query testimonialCollectionQuery${timestamp} {
-  testimonialCollection {
-    items {
-      sys {
-        id
-      }
-     customerName
-      customerRole
-      review
-      customerPic{url}
-    }
-  }
-}`,
-            }),
-        },
-    );
-    const articleResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-
-            },
-            body: JSON.stringify({
-                query: `query blogCollectionQuery${timestamp} {
-  blogCollection(limit:3,skip:0){
-    items {
-      sys {
-        id
-      }
-     title
-     slug
-     featured{url}
-     categories
-     description
-      date
-    }
-  }
-}`,
-            }),
-        },
-    );
-    const hero = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-                'Cache-Control': 'no-cache',
-            },
-            body: JSON.stringify({
-                query: `
-         query billboardEntryQuery${timestamp} {
-  billboard(id: "2PwYWCYlqqAlK2Ur8yVmm3") {
-    sys {
-      id
-    }
-    description
-    image{url}
-  }
-}
-        `,
-            }),
-        }
-    );
-    if (!result.ok ) {
-        console.error(result);
-        return {};
-    }
-    const {data} = await result.json();
-
-
-
-    const data2=await serviceResult.json();
-    const data3=await workResult.json();
-    const data4=await testimonialResult.json();
-    const data5=await articleResult.json();
-    const data6=await hero.json();
-   const service=data2.data.productsCollection.items;
-   const work=data3.data.worksamplesCollection.items;
-   const testimonial=data4.data.testimonialCollection.items;
-   const article=data5.data.blogCollection.items;
-   const billboard=data6.data.billboard;
-
-
-    const teams = data.teamCollection.items;
+    const SERVICE_ID = environments.SERVICE_ID;
+    const PUBLIC_KEY = environments.PUBLIC_KEY;
+    const TEMPLATE_ID = environments.TEMPLATE_ID;
+    const billboard = await FetchDataLimited("billboard", 1);
+    const team = await FetchData("team");
+    const work = await FetchDataLimited("worksamples", 9)
+    const billboardData = billboard.map((data: any) => ({
+        description: data.fields.description,
+        image: "https:" + data.fields.image.fields.file.url,
+    }))
+    const worksamples = work.map((data: any) => ({
+        projectName: data.fields.projectName,
+        projectLink: data.fields.projectLink,
+        shortDescription: data.fields.shortDescription,
+        featured: "https:" + data.fields.featured.fields.file.url,
+        id: data.sys.id
+    }))
+    const service = await FetchData("products")
+    const teamData = team.map((data: any) => ({
+        username: data.fields.username,
+        role: data.fields.role,
+        slug: data.fields.slug,
+        bio: data.fields.bio,
+        linkedin: data.fields.linkedinn,
+        github: data.fields.github,
+        facebook: data.fields.facebook,
+        profilepic: "https:" + data.fields.profilepic.fields.file.url,
+        id: data.sys.id,
+    }));
+    const serviceData = service.map((data: any) => ({
+        id: data.sys.id,
+        title: data.fields.title,
+        slug: data.fields.slug,
+        description: data.fields.description,
+        featured: "https:" + data.fields.featured.fields.file.url,
+    }));
+    const testimonial = await FetchData("testimonial")
+    const testimonailData = testimonial.map((data: any) => ({
+        customerName: data.fields.customerName,
+        customerRole: data.fields.customerRole,
+        review: data.fields.review,
+        customerPic: "https:" + data.fields.customerPic.fields.file.url,
+        id: data.sys.id
+    }))
+    const blog = await FetchDataLimited("blog", 3)
+    const blogData = blog.map((data: any) => ({
+        title: data.fields.title,
+        slug: data.fields.slug,
+        description: data.fields.description,
+        featured: "https:" + data.fields.featured.fields.file.url,
+        id: data.sys.id
+    }))
 
     return (
         <main>
-            <Hero billboard={billboard}/>
-            <Team team={teams}/>
-            <Services services={service}/>
-            <WorkSamples work={work}/>
-            <Testimonial customers={testimonial}/>
-            <BlogCard article={article}/>
+            <Hero billboard={billboardData[0]}/>
+            <Team team={teamData}/>
+            <Services services={serviceData}/>
+            <WorkSamples work={worksamples}/>
+            <Testimonial customers={testimonailData}/>
+            <BlogCard article={blogData}/>
             <ContactForm SERVICE_ID={SERVICE_ID} PUBLIC_KEY={PUBLIC_KEY} TEMPLATE_ID={TEMPLATE_ID}/>
         </main>
     )
