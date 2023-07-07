@@ -54,9 +54,11 @@ export default async function Home() {
         id: data.sys.id
     }))
     const blog = await FetchDataLimited("blog", 3)
+
     const blogData = blog.map((data: any) => ({
         title: data.fields.title,
         slug: data.fields.slug,
+        categories: data.fields.categories,
         description: data.fields.description,
         featured: "https:" + data.fields.featured.fields.file.url,
         id: data.sys.id
