@@ -1,12 +1,17 @@
 "use client"
-import React, {useState, FormEvent, useRef, ChangeEvent} from 'react';
+import React, {useState, FormEvent, useRef, ChangeEvent, FC} from 'react';
 import {AiFillLinkedin} from "react-icons/ai"
 import Validator from 'email-validator';
 import {BsWhatsapp} from 'react-icons/bs';
 import Link from "next/link"
 import emailjs from 'emailjs-com';
 
-const ContactForm = () => {
+interface Props{
+    SERVICE_ID:any
+    TEMPLATE_ID:any
+    PUBLIC_KEY:any
+}
+const ContactForm:FC<Props> = ({SERVICE_ID,TEMPLATE_ID,PUBLIC_KEY}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -50,15 +55,16 @@ const ContactForm = () => {
             }
             emailjs
                 .sendForm(
-                    `${process.env.SERVICE_ID}`,
-                    `${process.env.TEMPLATE_ID}`,
+                    `${SERVICE_ID}`,
+                    `${TEMPLATE_ID}`,
                     form.current!,
-                    `${process.env.PUBLIC_KEY}`
+                    `${PUBLIC_KEY}`
                 )
                 .then(
                     (result) => {
                         console.log(result.text);
                         setHasSubmitted(true);
+                        setHasShowSubmitted(true);
                         setName('')
                         setEmail('');
                         setMessage('');
@@ -67,10 +73,7 @@ const ContactForm = () => {
                         console.log(error.text);
                     }
                 );
-
             setEmailing(false);
-
-            setHasShowSubmitted(true);
         } catch (e) {
             console.error('Failed to Send the Message', e);
             setEmailing(false);

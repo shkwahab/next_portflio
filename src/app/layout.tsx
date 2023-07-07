@@ -5,7 +5,7 @@ import {ReactNode,FC} from "react";
 import {Poppins} from "next/font/google";
 import {Roboto_Serif} from "next/font/google";
 import {Metadata} from "next";
-
+import environments from "@/app/environments";
 export const metadata: Metadata = {
     title: 'Code Brothers',
     description: 'Developers Community',
@@ -27,6 +27,8 @@ const Roboto=Roboto_Serif({
 interface Props{
     children:ReactNode
 }
+const DELIVERY_TOKEN=environments.DELIVERY_TOKEN;
+const SPACE_ID=environments.SPACE_ID;
 const RootLayout:FC<Props> =({children})=> {
   return (
     <html lang="en" className={`${poppins.variable} ${Roboto.variable}`}>
@@ -35,7 +37,7 @@ const RootLayout:FC<Props> =({children})=> {
          <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
      </head>
       <body >
-      <ThemeProvider>
+      <ThemeProvider DELIVERY_TOKEN={DELIVERY_TOKEN} SPACE_ID={SPACE_ID}>
       {children}
       </ThemeProvider>
       </body>

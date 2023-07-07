@@ -6,21 +6,26 @@ import Footer from '@/app/components/Footer';
 
 interface Props {
     children: ReactNode;
+    SPACE_ID: any
+    DELIVERY_TOKEN: any
 }
 
-const data = async () => {
-    const timestamp = Date.now().toString();
-    const result = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
-        {
-            method: 'POST',
-            headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
-                'Content-Type': 'application/json',
-                'Cache-Control': 'no-cache',
-            },
-            body: JSON.stringify({
-                query: `
+
+
+const ThemeProvider: FC<Props> = ({ children,SPACE_ID,DELIVERY_TOKEN }) => {
+    const data= async () => {
+        const timestamp = Date.now().toString();
+        const result = await fetch(
+            `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
+            {
+                method: 'POST',
+                headers: {
+                    Authorization: `Bearer ${DELIVERY_TOKEN}`,
+                    'Content-Type': 'application/json',
+                    'Cache-Control': 'no-cache',
+                },
+                body: JSON.stringify({
+                    query: `
           query companyEntryQuery${timestamp} {
             company(id: "79BcPAv3ISMtIRQtiU7r0p") {
               sys {
@@ -34,19 +39,17 @@ const data = async () => {
             }
           }
         `,
-            }),
+                }),
+            }
+        );
+        if (!result.ok) {
+            console.error(result);
+            return {};
         }
-    );
-    if (!result.ok) {
-        console.error(result);
-        return {};
-    }
-    const { data } = await result.json();
-    const company = data.company;
-    return company;
-};
-
-const ThemeProvider: FC<Props> = ({ children }) => {
+        const { data } = await result.json();
+        const response = data.company;
+        return response;
+    };
     const [company, setCompany] = useState<any>("");
     useEffect(() => {
         data().then((data) => {

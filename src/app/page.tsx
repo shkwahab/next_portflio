@@ -6,17 +6,21 @@ import Services from "@/app/components/Services";
 import Testimonial from "@/app/components/Testimonial";
 import BlogCard from "@/app/components/BlogCard";
 import ContactForm from "@/app/components/ContactForm";
-
+import environments from "@/app/environments";
 
 export default async function Home() {
     const timestamp = Date.now().toString();
-
+    const SPACE_ID=environments.SPACE_ID;
+    const DELIVERY_TOKEN=environments.DELIVERY_TOKEN;
+    const SERVICE_ID=environments.SERVICE_ID;
+    const PUBLIC_KEY=environments.PUBLIC_KEY;
+    const TEMPLATE_ID=environments.TEMPLATE_ID;
     const result = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache',
             },
@@ -46,11 +50,11 @@ export default async function Home() {
         },
     );
     const serviceResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
 
             },
@@ -74,11 +78,11 @@ export default async function Home() {
         },
     );
     const workResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
 
             },
@@ -101,11 +105,11 @@ export default async function Home() {
         },
     );
     const testimonialResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
 
             },
@@ -127,11 +131,11 @@ export default async function Home() {
         },
     );
     const articleResult = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
 
             },
@@ -155,11 +159,11 @@ export default async function Home() {
         },
     );
     const hero = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
         {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                Authorization: `Bearer ${DELIVERY_TOKEN}`,
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache',
             },
@@ -208,7 +212,7 @@ export default async function Home() {
             <WorkSamples work={work}/>
             <Testimonial customers={testimonial}/>
             <BlogCard article={article}/>
-            <ContactForm/>
+            <ContactForm SERVICE_ID={SERVICE_ID} PUBLIC_KEY={PUBLIC_KEY} TEMPLATE_ID={TEMPLATE_ID}/>
         </main>
     )
 }
