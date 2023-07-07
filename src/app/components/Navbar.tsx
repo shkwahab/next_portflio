@@ -1,57 +1,64 @@
 "use client"
-import React,{FC,useState} from 'react'
-import { useTheme } from "next-themes";
+import React, {FC, useState} from 'react'
+import {useTheme} from "next-themes";
+import {IoReorderThreeSharp} from "react-icons/io5"
 import Link from "next/link";
 import {CiDark} from "react-icons/ci"
-type Category={
-    title:string,
-    id:string,
-    href:string
-}
-interface Categories{
-    category:Category[],
-    siteTitle:string
-}
-const Navbar: FC<Categories> = ({ category,siteTitle }) => {
-        const { systemTheme, theme, setTheme } = useTheme();
-        const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  return (
-   <>
-   <header className="text-gray-600 body-font sticky top-0">
-  <div className="container mx-auto md:flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <Link href={"/"} className="flex  title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span className="ml-3 text-xl capitalize font-medium">{siteTitle}</span>
-        <button className={`md:hidden absolute right-8  bg-primary rounded-full p-2 `} onClick={()=>{
-            theme == "dark"? setTheme('light'): setTheme("dark")
-        }}>
-            <CiDark className={`text-xl sm:text-2xl text-white  dark:text-white`}/>
-        </button>
-    </Link>
-    <nav className={` md:ml-auto  md:flex flex-wrap items-center text-base justify-center`}>
-        <ul className={`mt-8 md:mt-0 md:flex`}>
-        {category.map((item:Category)=>{
-            return <Link href={item.href}>
-                <li className={`text-xl mx-4 my-4 md:my-0 `}>
-                {item.title}
-             </li>
-            </Link>
-        })}
-        </ul>
+type Category = {
+    title: string,
+    id: string,
+    href: string
+}
 
-    </nav>
-<button className={`md:block hidden bg-primary rounded-full p-2 `} onClick={()=>{
-    theme == "dark"? setTheme('light'): setTheme("dark")
-}}>
-    <CiDark className={`text-xl sm:text-2xl text-white  dark:text-white`}/>
-</button>
-  </div>
-</header>
-   </>
-  )
+interface Categories {
+    category: Category[],
+    siteTitle: string
+}
+
+const Navbar: FC<Categories> = ({category, siteTitle}) => {
+    const {systemTheme, theme, setTheme} = useTheme();
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+    const [isMobi, SetMobi] = useState<boolean>(false)
+    const MobiBtn = () => {
+        SetMobi(!isMobi)
+    }
+
+    return (
+        <>
+            <header className="text-gray-600 bg-dark bg-white md:sticky z-[100] md:top-0">
+                <section className="container mx-auto flex flex-col flex-wrap p-5 md:flex-row">
+                    <Link href={"/"} className="flex order-1  title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <img  className={`w-20`} src="/logo.svg" alt={siteTitle}/>
+                        <span className="ml-3 text-xl capitalize font-bold ">{siteTitle}</span>
+                    </Link>
+                    <nav className={` md:ml-auto  flex  flex-wrap items-center text-base order-2`}>
+                        <ul className={`md:mt-0 ${isMobi ? "h-[250px]" : "h-0"} transition-all md:h-auto  duration-500 overflow-hidden md:overflow-auto flex flex-col md:flex-row`}>
+                            {category.map((item: Category) => {
+                                return <Link href={item.href} key={item.id}>
+                                    <li className={`text-xl mx-4 my-4 md:my-0 `}>
+                                        {item.title}
+                                    </li>
+                                </Link>
+                            })}
+                        </ul>
+
+                    </nav>
+                    <div className="md:flex md:static order-3 absolute right-4 md:flex-row">
+                        <button className={`     bg-primary rounded-full p-2 `} onClick={() => {
+                            theme == "dark" ? setTheme('light') : setTheme("dark")
+                        }}>
+                            <CiDark className={`text-xl sm:text-2xl text-white  dark:text-white`}/>
+                        </button>
+                        <button className={` md:hidden ml-4  bg-primary rounded-full p-2 `} onClick={MobiBtn}>
+                            <IoReorderThreeSharp className={`text-xl sm:text-2xl text-white  dark:text-white`}/>
+                        </button>
+                    </div>
+                </section>
+                <hr className={`h-[2px] bg-black  bg-opacity-60`}/>
+            </header>
+        </>
+    )
 }
 
 export default Navbar

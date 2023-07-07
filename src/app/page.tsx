@@ -7,10 +7,7 @@ import Testimonial from "@/app/components/Testimonial";
 import BlogCard from "@/app/components/BlogCard";
 import ContactForm from "@/app/components/ContactForm";
 
-export const metadata: Metadata = {
-    title: 'Home',
-    description: 'Test',
-}
+
 export default async function Home() {
     const timestamp = Date.now().toString();
 
@@ -157,30 +154,55 @@ export default async function Home() {
             }),
         },
     );
-
+    const hero = await fetch(
+        `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+        {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${process.env.CONTENTFUL_DELIVERY_TOKEN}`,
+                'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
+            },
+            body: JSON.stringify({
+                query: `
+         query billboardEntryQuery${timestamp} {
+  billboard(id: "2PwYWCYlqqAlK2Ur8yVmm3") {
+    sys {
+      id
+    }
+    description
+    image{url}
+  }
+}
+        `,
+            }),
+        }
+    );
     if (!result.ok ) {
         console.error(result);
         return {};
     }
-
     const {data} = await result.json();
+
 
 
     const data2=await serviceResult.json();
     const data3=await workResult.json();
     const data4=await testimonialResult.json();
     const data5=await articleResult.json();
+    const data6=await hero.json();
    const service=data2.data.productsCollection.items;
    const work=data3.data.worksamplesCollection.items;
    const testimonial=data4.data.testimonialCollection.items;
    const article=data5.data.blogCollection.items;
+   const billboard=data6.data.billboard;
 
 
     const teams = data.teamCollection.items;
 
     return (
         <main>
-            <Hero/>
+            <Hero billboard={billboard}/>
             <Team team={teams}/>
             <Services services={service}/>
             <WorkSamples work={work}/>

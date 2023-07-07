@@ -2,26 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1,h2,h3,span,p,li,button{
+    @apply dark:text-white
+}
+body,li,a,Link{
+   font-family: var(--font-Poppins)
+}
+body{
+    @apply  dark:bg-blue-950;
+}
+.bg-primary{
+    @apply bg-blue-600 dark:bg-blue-400
+}
+h1,h2,h3,span{
+    font-family: var(--font-Roboto);
+}
+.bg-dark{
+    @apply dark:bg-gray-900
+}
+.bg-light{
+    @apply bg-blue-600
+}
+.bg-buttonLight{
+    @apply bg-blue-500
+}
+.bg-buttonDark{
+    @apply dark:bg-blue-900
+}
+.text-primaryColor{
+    @apply text-blue-600 dark:text-blue-500
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
