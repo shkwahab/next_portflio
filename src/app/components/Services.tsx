@@ -28,7 +28,7 @@ const Services: FC<Props> = ({services}) => {
                 <div className="flex flex-wrap -m-4">
                     {services.map((service) => {
                         return <div key={service.id} className="xl:w-1/3 md:w-1/2 w-11/12 my-4 p-4 md:mx-0 mx-auto">
-                            <Link href={service.slug}>
+                            <Link href={"/services/"+service.slug}>
                                 <div
                                     className="rounded-lg bg-white dark:bg-white  ">
                                     <Image width={720} height={400}

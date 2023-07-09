@@ -6,7 +6,7 @@ import Testimonial from "@/app/components/Testimonial";
 import BlogCard from "@/app/components/BlogCard";
 import ContactForm from "@/app/components/ContactForm";
 import environments from "@/app/environments";
-import {FetchData, FetchDataLimited} from "@/app/crud";
+import {FetchData, FetchDataLimited} from "@/app/lib/crud";
 
 export default async function Home() {
     const SERVICE_ID = environments.SERVICE_ID;

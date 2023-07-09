@@ -5,6 +5,9 @@
 h1,h2,h3,span,p,li,button{
     @apply dark:text-white
 }
+.service-h1{
+   font-family: var(--font-Poppins)
+ }
 body,li,a,Link{
    font-family: var(--font-Poppins)
 }

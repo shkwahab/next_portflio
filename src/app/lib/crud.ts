@@ -1,4 +1,4 @@
-import {client} from "@/client";
+import {client} from "@/app/lib/client";
 const FetchDataLimited=async (contentType:string,limit:number)=>{
     const response  = await  client.getEntries({
         content_type:contentType,
@@ -6,6 +6,7 @@ const FetchDataLimited=async (contentType:string,limit:number)=>{
     })
     return response.items;
 }
+
 const FetchData=async (contentType:string)=>{
     const response  = await  client.getEntries({
         content_type:contentType,
