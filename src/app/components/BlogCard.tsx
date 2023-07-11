@@ -31,7 +31,7 @@ const BlogCard:FC<Props> =({article})=> {
                                 <div className="p-6 border-[1px]  border-gray-400 border-t-0 rounded-b-lg dark:border-none">
                                     <h3 className="tracking-widest text-xs title-font font-medium dark:text-gray-400 text-gray-400  mb-1">{article.categories}</h3>
                                     <h2 className="title-font text-lg font-medium dark:text-gray-900 text-gray-900 mb-3">{article.title}</h2>
-                                    <p className="leading-relaxed dark:text-black mb-3">{article.description}</p>
+                                    <p className="leading-relaxed dark:text-black mb-3">{article.description.slice(0,100)}...</p>
                                     <div className="flex items-center flex-wrap ">
                                         <div className="text-primaryColor inline-flex items-center md:mb-2 lg:mb-0">Read
                                             More
