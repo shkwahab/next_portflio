@@ -128,7 +128,7 @@ const Category:FC<Props> =({title,data}) =>{
                                            {post.category}
                                        </h2>
                                        <h2 className=" text-lg sm:text-xl md:text-2xl font-medium mb-3">{post.title}</h2>
-                                       <p className="leading-relaxed mb-3">{post.description}</p>
+                                       <p className="leading-relaxed mb-3">{post.description?.slice(0,100)}...</p>
                                    </div>
                                </div>
                            </Link>
