@@ -144,7 +144,7 @@ const Article: FC<Props> = ({article, latestArticles, relatedArticles}) => {
                                                            alt={data.title}/>
                                                 </div>
                                                 <div className={`mx-2`}>
-                                                    <h2 className={`md:text-lg`}>
+                                                    <h2 className={`font-medium mb-2 md:text-lg`}>
                                                         {data.title}
                                                     </h2>
                                                     <p>
@@ -162,7 +162,7 @@ const Article: FC<Props> = ({article, latestArticles, relatedArticles}) => {
                         </div>
                     </div>
                 </div>
-                <div ref={divEle} id={`relatedArticles `} className={`my-20 ${relatedArticles.length>0?"":"hidden"}`}>
+                <div ref={divEle} id={`relatedArticles `} className={`my-40 ${relatedArticles.length>0?"":"hidden"}`}>
                     <h2 className={`text-xl sm:text-2xl md:text-3xl `}>
                         Related Articles
                     </h2>
@@ -170,14 +170,14 @@ const Article: FC<Props> = ({article, latestArticles, relatedArticles}) => {
                         {
                             relatedArticles.map((data) => {
                                 return <Link className={`mx-4`} href={data.slug} id={data.id}>
-                                    <div className="grid grid-cols-[1.5fr_2fr]">
+                                    <div className="grid md:grid-cols-[1.5fr_2fr]">
                                         <div>
                                             <Image width={600} height={600}
-                                                   className={`h-52 w-64 rounded-lg object-center object-cover`}
+                                                   className={` w-72 h-52 md:w-64 rounded-lg object-center object-cover`}
                                                    src={data.image} alt={data.title}/>
                                         </div>
                                         <div className="mx-4">
-                                            <h2 className={`font-semibold mt-2 capitalize sm:text-xl md:text-2xl`}>
+                                            <h2 className={`font-medium  mt-2 capitalize sm:text-xl md:text-2xl`}>
                                                 {data.title}
                                             </h2>
                                             <p className={`mt-4`}>
