@@ -177,10 +177,10 @@ const Article: FC<Props> = ({article, latestArticles, relatedArticles}) => {
                                                    src={data.image} alt={data.title}/>
                                         </div>
                                         <div className="mx-4">
-                                            <h2 className={`sm:text-xl md:text-2xl`}>
+                                            <h2 className={`capitalize sm:text-xl md:text-2xl`}>
                                                 {data.title}
                                             </h2>
-                                            <p>
+                                            <p className={`mt-4`}>
                                                 {data.description.slice(0, 100)}...
                                             </p>
                                             <p className={`mt-1 text-primaryColor`}>
