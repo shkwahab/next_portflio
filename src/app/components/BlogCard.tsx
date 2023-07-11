@@ -24,7 +24,7 @@ const BlogCard:FC<Props> =({article})=> {
                 </div>
                 <div className="flex flex-wrap -m-4">
                     {article.map((article)=>{
-                        return   <Link href={article.slug} key={article.id} className="p-4 md:w-1/3">
+                        return   <Link href={"/blog/"+article.slug} key={article.id} className="p-4 md:w-1/3">
                             <div className="h-full  dark:bg-white border-opacity-60 rounded-lg overflow-hidden">
                                 <img  className="lg:h-48 md:h-36 w-full object-cover object-center"
                                      src={article.featured} alt={article.title}/>

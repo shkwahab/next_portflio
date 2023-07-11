@@ -33,12 +33,12 @@ const RootLayout:FC<Props> =({children})=> {
   return (
     <html lang="en" className={`${poppins.variable} ${Roboto.variable}`}>
      <head>
-
          <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
      </head>
       <body >
       <ThemeProvider DELIVERY_TOKEN={DELIVERY_TOKEN} SPACE_ID={SPACE_ID}>
       {children}
+      <script id="dsq-count-scr" src="//code-brothers.disqus.com/count.js" async></script>
       </ThemeProvider>
       </body>
     </html>

@@ -2,7 +2,7 @@ import {client} from "@/app/lib/client";
 const FetchDataLimited=async (contentType:string,limit:number)=>{
     const response  = await  client.getEntries({
         content_type:contentType,
-        limit:limit
+        limit:limit,
     })
     return response.items;
 }

@@ -5,11 +5,20 @@
 h1,h2,h3,span,p,li,button{
     @apply dark:text-white
 }
+code span{
+    font-family: var(--font-Poppins)
+}
 .service-h1{
    font-family: var(--font-Poppins)
  }
-body,li,a,Link{
+body,h3,span.special,li,a,Link{
    font-family: var(--font-Poppins)
+}
+span.special{
+    @apply text-white !important
+}
+pre{
+    @apply dark:bg-transparent
 }
 body{
     @apply  dark:bg-blue-950;
@@ -17,7 +26,7 @@ body{
 .bg-primary{
     @apply bg-blue-600 dark:bg-blue-400
 }
-h1,h2,h3,span{
+h1,h2,span{
     font-family: var(--font-Roboto);
 }
 .bg-dark{

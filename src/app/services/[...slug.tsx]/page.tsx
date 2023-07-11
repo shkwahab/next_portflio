@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import ServicePage from '@/app/components/ServicePage';
+import {notFound} from "next/navigation";
 
 const contentful = require('contentful');
 
@@ -21,7 +22,9 @@ const Page: FC<Props> = async ({params}) => {
     }
 
     const data = await FetchData('products');
-
+    if(!data){
+        notFound()
+    }
     const service={
         title:data.fields.title,
         description:data.fields.description,

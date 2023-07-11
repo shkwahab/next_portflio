@@ -1,14 +1,19 @@
 "use client"
 import React, {FC,useState} from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 
 type data={
-    title:string
-    image:string
-    description:string
-    slug:string
+    title?:string
+    image?:string
+    description?:string
+    slug?:string
     category?:string
-    id:string
+    id?:string
+    projectName?:string
+    projectLink?:string
+    shortDescription?:string
+    featured?:string
 }
 interface Props{
     title:string
@@ -19,7 +24,13 @@ const Category:FC<Props> =({title,data}) =>{
     const totalPosts = data.length;
     const totalPages = Math.ceil(totalPosts / itemsPerPage);
     const [currentPage, setCurrentPage] = useState(0);
+    const [imgZoom, setZoom] = useState<boolean[]>(Array(data.length).fill(false));
 
+    const handleZoom = (index: number) => {
+        const zoomState = [...imgZoom];
+        zoomState[index] = !zoomState[index];
+        setZoom(zoomState);
+    };
     const handlePageClick = (page:any) => {
         setCurrentPage(page);
     };
@@ -99,7 +110,7 @@ const Category:FC<Props> =({title,data}) =>{
                        <div className="h-1 w-20 bg-primary rounded"></div>
                    </div>
                </div>
-               <div className="my-4 grid md:grid-cols-3">
+               <div className={`my-4 grid md:grid-cols-3 ${title==="Portfolio"?"hidden":""}`}>
                    {currentItems.map((post) => (
                        <div key={post.id}>
                            <Link href={"/"+title+"/"+post.slug}>
@@ -123,6 +134,43 @@ const Category:FC<Props> =({title,data}) =>{
                            </Link>
                        </div>
                    ))}
+               </div>
+
+               <div className={`my-4 grid md:grid-cols-3 ${title==="Portfolio"?"":"hidden"}`}>
+                   {currentItems.map((worksamples,index)=>{
+                       return (
+                           <div
+                               key={worksamples.id}
+                               className=" my-4 p-4 md:mx-0 mx-auto"
+                           >
+                               <Link target="_blank" href={worksamples.projectLink||""}>
+                                   <div className="rounded-lg relative dark:bg-white">
+                                       <div className="h-80 rounded-lg overflow-hidden">
+                                           <Image
+                                               width={720}
+                                               height={400}
+                                               className={`${imgZoom[index] ? 'scale-125 object-cover' : ''} transition-all duration-500`}
+                                               src={worksamples.featured || ""}
+                                               alt="content"
+                                           />
+                                           <div
+                                               onMouseEnter={() => handleZoom(index)}
+                                               onMouseLeave={() => handleZoom(index)}
+                                               className="absolute inset-0 bg-black bg-opacity-30 rounded-lg opacity-0 flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-100 focus:opacity-100"
+                                           >
+                                               <h2 className="text-lg text-white font-bold mb-4">
+                                                   {worksamples.projectName}
+                                               </h2>
+                                               <p className="text-base p-2 text-white">
+                                                   {worksamples.shortDescription}
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </Link>
+                           </div>
+                       );
+                   })}
                </div>
 
                <div className="flex justify-center mt-4">
