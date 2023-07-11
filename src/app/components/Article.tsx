@@ -166,7 +166,7 @@ const Article: FC<Props> = ({article, latestArticles, relatedArticles}) => {
                     <h2 className={`text-xl sm:text-2xl md:text-3xl `}>
                         Related Articles
                     </h2>
-                    <div className={`grid md:grid-cols-3 my-8`}>
+                    <div className={`grid md:grid-cols-2 my-8`}>
                         {
                             relatedArticles.map((data) => {
                                 return <Link className={`mx-4`} href={data.slug} id={data.id}>
