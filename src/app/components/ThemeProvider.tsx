@@ -17,9 +17,6 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-
-
-
                 const timestamp = Date.now().toString();
                 const result = await fetch(
                     `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}/environments/master`,
@@ -75,6 +72,7 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
     };
 
     return (
+
         <Theme attribute="class">
             <Navbar
                 siteTitle="Code Brothers"
@@ -111,6 +109,7 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
                 />
             )}
         </Theme>
+
     );
 };
 

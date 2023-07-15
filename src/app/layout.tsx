@@ -1,5 +1,4 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import ThemeProvider from "@/app/components/ThemeProvider";
 import {ReactNode,FC} from "react";
 import {Poppins} from "next/font/google";
@@ -35,12 +34,13 @@ const RootLayout:FC<Props> =({children})=> {
      <head>
          <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
      </head>
-      <body >
+     <body >
       <ThemeProvider DELIVERY_TOKEN={DELIVERY_TOKEN} SPACE_ID={SPACE_ID}>
       {children}
       <script id="dsq-count-scr" src="//code-brothers.disqus.com/count.js" async></script>
       </ThemeProvider>
       </body>
+
     </html>
   )
 }

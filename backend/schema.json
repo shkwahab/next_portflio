@@ -1,0 +1,6784 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "products",
+        "type": "ContentType",
+        "createdAt": "2023-07-02T13:05:20.007Z",
+        "updatedAt": "2023-07-08T14:53:21.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 27,
+        "publishedAt": "2023-07-08T14:53:21.365Z",
+        "firstPublishedAt": "2023-07-02T13:05:20.529Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 14,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "services",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featured",
+          "name": "featured",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "price",
+          "name": "price",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cart",
+          "name": "cart",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "team",
+        "type": "ContentType",
+        "createdAt": "2023-07-02T13:26:37.075Z",
+        "updatedAt": "2023-07-04T11:47:55.738Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-04T11:47:55.738Z",
+        "firstPublishedAt": "2023-07-02T13:26:37.590Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "username",
+      "name": "team",
+      "description": "",
+      "fields": [
+        {
+          "id": "username",
+          "name": "username",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profilepic",
+          "name": "profilepic",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "role",
+          "name": "role",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "bio",
+          "name": "bio",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "facebook",
+          "name": "Facebook",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkedinn",
+          "name": "Linkedinn",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "github",
+          "name": "github",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "worksamples",
+        "type": "ContentType",
+        "createdAt": "2023-07-04T14:56:53.543Z",
+        "updatedAt": "2023-07-04T14:57:52.934Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-04T14:57:52.934Z",
+        "firstPublishedAt": "2023-07-04T14:56:54.023Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "projectName",
+      "name": "Worksamples",
+      "description": "",
+      "fields": [
+        {
+          "id": "projectName",
+          "name": "Project Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "projectLink",
+          "name": "Project Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featured",
+          "name": "Featured",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "shortDescription",
+          "name": "Short Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "testimonial",
+        "type": "ContentType",
+        "createdAt": "2023-07-04T19:20:16.449Z",
+        "updatedAt": "2023-07-04T19:21:26.758Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-04T19:21:26.758Z",
+        "firstPublishedAt": "2023-07-04T19:20:16.940Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "customerName",
+      "name": "Testimonial",
+      "description": "",
+      "fields": [
+        {
+          "id": "customerName",
+          "name": "Customer Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "customerRole",
+          "name": "customerRole",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "customerPic",
+          "name": "Customer Pic",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "review",
+          "name": "review",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "blog",
+        "type": "ContentType",
+        "createdAt": "2023-07-05T11:58:13.133Z",
+        "updatedAt": "2023-07-07T16:51:04.711Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 23,
+        "publishedAt": "2023-07-07T16:51:04.711Z",
+        "firstPublishedAt": "2023-07-05T11:58:13.710Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "blog",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featured",
+          "name": "featured",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "article",
+          "name": "article",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "categories",
+          "name": "categories",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "next.js",
+                  "react.js",
+                  "php",
+                  "python",
+                  "figma"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "company",
+        "type": "ContentType",
+        "createdAt": "2023-07-06T20:56:10.658Z",
+        "updatedAt": "2023-07-06T20:58:04.788Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-06T20:58:04.788Z",
+        "firstPublishedAt": "2023-07-06T20:56:11.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "company",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "github",
+          "name": "github",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkedin",
+          "name": "linkedin",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "instagram",
+          "name": "instagram",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "facebook",
+          "name": "facebook",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "billboard",
+        "type": "ContentType",
+        "createdAt": "2023-07-06T21:35:49.489Z",
+        "updatedAt": "2023-07-06T21:36:33.562Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-06T21:36:33.562Z",
+        "firstPublishedAt": "2023-07-06T21:35:49.963Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "description",
+      "name": "billboard",
+      "description": "",
+      "fields": [
+        {
+          "id": "description",
+          "name": "description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "code",
+        "type": "ContentType",
+        "createdAt": "2023-07-10T10:57:28.715Z",
+        "updatedAt": "2023-07-11T09:34:02.953Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-11T09:34:02.953Z",
+        "firstPublishedAt": "2023-07-10T10:57:29.289Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Code",
+      "description": "Add Blog Code Here",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "code",
+          "name": "code",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "codetype",
+          "name": "codetype",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 28,
+        "createdAt": "2023-07-02T13:05:20.655Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-08T14:53:22.482Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "products",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "title"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featured",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "price",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cart",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2023-07-02T13:26:37.788Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-04T11:47:56.889Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "team",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "username",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "username"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "profilepic",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bio",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facebook",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkedinn",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "github",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-07-04T14:56:54.167Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-04T14:57:54.065Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "worksamples",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "projectName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "projectLink",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featured",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shortDescription",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2023-07-04T19:20:17.105Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-04T19:21:27.640Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "testimonial",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "customerName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customerRole",
+          "settings": {
+            "helpText": "What services customer need like Web Design?"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customerPic",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "review",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 24,
+        "createdAt": "2023-07-05T11:58:13.922Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-07T16:51:05.833Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blog",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "trackingFieldId": "title"
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featured",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "article",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "categories",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-07-06T20:56:11.490Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-06T20:58:06.313Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "company",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "github",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "linkedin",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "instagram",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "facebook",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-07-06T21:35:50.066Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-06T21:36:34.515Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "billboard",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "sidebar": [
+        {
+          "settings": {
+          },
+          "widgetId": "66frtrAqmWSowDJzQNDiD",
+          "widgetNamespace": "app"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {
+          },
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
+      "controls": [
+        {
+          "fieldId": "description",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "use your own space id",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-07-10T10:57:29.441Z",
+        "createdBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-11T09:34:04.071Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3If1npUja6C4E3ULxKjqvP",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "code",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "code",
+          "settings": {
+            "helpText": "code snippet"
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "codetype",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2xKXoIkkuoOL7tKsN47dW9",
+        "type": "Entry",
+        "createdAt": "2023-07-04T12:18:47.205Z",
+        "updatedAt": "2023-07-07T17:37:43.302Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2023-07-07T17:37:43.302Z",
+        "firstPublishedAt": "2023-07-04T12:19:05.176Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "team"
+          }
+        }
+      },
+      "fields": {
+        "username": {
+          "en-US": "Abdul Wahab"
+        },
+        "slug": {
+          "en-US": "abdul-wahab"
+        },
+        "profilepic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3RA4I6grZIKPK7EJ7jIWfh"
+            }
+          }
+        },
+        "role": {
+          "en-US": "Full Stack Web Developer"
+        },
+        "bio": {
+          "en-US": "Next.js, Tailwind CSS, MySQL, Sanity.io CMS, GraphQL, and more. Expert full-stack dev. Builds scalable web apps, integrates APIs, crafts efficient designs. Stay up-to-date, collaborative problem-solver. High-quality code, exceptional user experiences."
+        },
+        "facebook": {
+          "en-US": "https://www.facebook.com/shkwahabdev"
+        },
+        "linkedinn": {
+          "en-US": "https://www.linkedin.com/in/shkwahab/"
+        },
+        "github": {
+          "en-US": "https://github.com/shkwahab/"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4aHDneGeko7tA6Iq9brlvR",
+        "type": "Entry",
+        "createdAt": "2023-07-04T13:33:39.305Z",
+        "updatedAt": "2023-07-08T18:24:08.538Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2023-07-08T18:24:08.538Z",
+        "firstPublishedAt": "2023-07-04T13:34:40.150Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Landing Page Design"
+        },
+        "slug": {
+          "en-US": "landing-page"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1Vx94uZ0NNJCdYMxk1p0FW"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Elevate your brand with our stunning landing page design service. We create visually captivating and user-friendly landing pages that drive conversions. Let us optimize your online presence and captivate your audience in just one page. "
+        },
+        "price": {
+          "en-US": 70
+        },
+        "cart": {
+          "en-US": "https://pay.sadapay.com/invoice/48aa8670-b46d-4344-be1f-a3fa93d352f4"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3ucantI6KwePsxi9ocYh90",
+        "type": "Entry",
+        "createdAt": "2023-07-04T14:58:06.450Z",
+        "updatedAt": "2023-07-07T15:26:57.925Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-07T15:26:57.925Z",
+        "firstPublishedAt": "2023-07-04T14:59:52.534Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "worksamples"
+          }
+        }
+      },
+      "fields": {
+        "projectName": {
+          "en-US": "Html Magazine Template"
+        },
+        "projectLink": {
+          "en-US": "https://shkwahab.github.io/magazinetemplate/"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3KoUXWbIcMncmV48kdYMB0"
+            }
+          }
+        },
+        "shortDescription": {
+          "en-US": "The Magazine Website Template is a versatile and feature-rich web template for online magazines. It uses HTML, jQuery, and responsive design to provide an immersive reading experience on any device."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4xZrRp9ES2FVbnyx39diBz",
+        "type": "Entry",
+        "createdAt": "2023-07-04T19:20:29.965Z",
+        "updatedAt": "2023-07-07T16:29:19.719Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2023-07-07T16:29:19.719Z",
+        "firstPublishedAt": "2023-07-04T19:21:10.332Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "testimonial"
+          }
+        }
+      },
+      "fields": {
+        "customerName": {
+          "en-US": "Charlie Green"
+        },
+        "customerRole": {
+          "en-US": "React Js Store"
+        },
+        "customerPic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3euNrBTEYQ2IwixNU7Ex4w"
+            }
+          }
+        },
+        "review": {
+          "en-US": "Abdul is knowledgeable, helped us understand our situation. He also went above and beyond making sure our project was in a good position. We look forward to working with him in the future."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4akHP6vL3v0ZHjTGG23LQM",
+        "type": "Entry",
+        "createdAt": "2023-07-05T08:15:10.918Z",
+        "updatedAt": "2023-07-07T16:24:45.816Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-07T16:24:45.816Z",
+        "firstPublishedAt": "2023-07-05T08:15:21.855Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "testimonial"
+          }
+        }
+      },
+      "fields": {
+        "customerName": {
+          "en-US": "Charlotte"
+        },
+        "customerRole": {
+          "en-US": "Landing Page Design"
+        },
+        "customerPic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4KoyLihiaFUVKR1V4iR2vx"
+            }
+          }
+        },
+        "review": {
+          "en-US": "Abdul helped me with some custom code for a landing page in Instapage. It was an urgent project I needed to get done during the weekend. He made exactly what I needed and pretty fast, the communication was clear and efficient. He made it easy for me. Thank you man!"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "5rFgiDtWyoXRQdf8oKMJVV",
+        "type": "Entry",
+        "createdAt": "2023-07-05T08:15:33.857Z",
+        "updatedAt": "2023-07-07T16:30:26.603Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-07T16:30:26.603Z",
+        "firstPublishedAt": "2023-07-05T08:15:42.930Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "testimonial"
+          }
+        }
+      },
+      "fields": {
+        "customerName": {
+          "en-US": "Sarah Josef"
+        },
+        "customerRole": {
+          "en-US": "Landing Page Design"
+        },
+        "customerPic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7aiBQUXQ0qIASi3EnGrSjZ"
+            }
+          }
+        },
+        "review": {
+          "en-US": "Created the landing page that perfectly matched the mockup. He even suggested some good ideas to improve things. Great communication and completed everything quickly. Will work with Abdul Wahab again in the future!"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6cUStMsxV5UhIJTowC9szo",
+        "type": "Entry",
+        "createdAt": "2023-07-05T12:51:54.404Z",
+        "updatedAt": "2023-07-11T15:16:45.614Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 311,
+        "publishedAt": "2023-07-11T15:16:45.614Z",
+        "firstPublishedAt": "2023-07-05T12:52:22.659Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 64,
+        "version": 312,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Implementing Dark Mode in Next.js with Tailwind CSS"
+        },
+        "slug": {
+          "en-US": "dark-mode-nextjs-tailwindcss"
+        },
+        "description": {
+          "en-US": "Enhance your Next.js app with Dark Mode using Tailwind CSS. Learn step-by-step implementation, seamless theme toggling, and unleash the power of Next.js and Tailwind CSS for visually stunning, user-friendly experiences."
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6nlj2o1Omsr9S45VZaUylu"
+            }
+          }
+        },
+        "article": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Implementing Dark Mode",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Next.js makes it easy to implement dark mode using the dark variant in Tailwind CSS. You can prepend dark: to properties to indicate that they are for dark mode. For example, you can use dark:bg-gray-900 to change the background color to gray-900 when the theme is set to dark. By default, Next.js uses the system preferences to set the theme. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "However, we also need to toggle between light and dark modes. To do this, we can set the darkMode strategy to class in the tailwind.config.js file:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "FHQOh7IdtYow1mChhxIoQ",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Using next-themes",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "We need to toggle between and store the current theme somehow so that when user comes back it doesn't reset to default. One way of doing this could be with local storage and doing DOM manipulation. In this blog, we'll do something way simpler and use next-themes which handles all the toggling and storing of our preference.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "To install the library, using npm run:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7ak97rs3KzdMO0fkjZqJdU",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\nTo install the library, using yarn run:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7InSHdm9ce5aohfd9uBaBZ",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Then Create file name with ThemeProvider.tsx on components and paste this code:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5NT7HxUbrgpSTux5D4hfZU",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "In layout.tsx file wrap your component with the ThemeProvider from the component ThemeProvider.tsx",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5llfnzKFAzPQ3jBLR5NDQ1",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Accessibility Considerations",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "We can add some global styles to global.css. Here we set the background of the body to white in light mode and dark gray in dark mode.\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2bsW1zUmHIaZPYvvj28GFe",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Adding a Toggle Button",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "To allow users to toggle between light and dark modes, we need to add a toggle button to our application.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\r\nWe use the useTheme hook to know what the current theme is, change the current theme using the setTheme method, and the system theme.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\r\nInitially, we set the theme to the system theme.\r\nThe onclick event on the button toggles between the themes. We add some individual class using the dark: variant for the button.\r\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "4pmlXlSifbDHwNZkA2EH6t",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Adding Elements to page.tsx",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "We add the toggle button to page.tsx",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\r\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "6epHHJASghvWmeSD0VIjoF",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "date": {
+          "en-US": "2023-07-05"
+        },
+        "categories": {
+          "en-US": [
+            "next.js"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "79BcPAv3ISMtIRQtiU7r0p",
+        "type": "Entry",
+        "createdAt": "2023-07-06T20:56:35.783Z",
+        "updatedAt": "2023-07-07T09:34:27.911Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-07T09:34:27.911Z",
+        "firstPublishedAt": "2023-07-06T20:57:37.490Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "company"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Code Brothers"
+        },
+        "github": {
+          "en-US": "https://github.com/"
+        },
+        "linkedin": {
+          "en-US": "https://linkedin.com/"
+        },
+        "instagram": {
+          "en-US": "https://www.instagram.com/"
+        },
+        "facebook": {
+          "en-US": "https://facebook.com/"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "1g76SGNfMQV6f2aHaoX7I7",
+        "type": "Entry",
+        "createdAt": "2023-07-07T13:55:34.897Z",
+        "updatedAt": "2023-07-07T17:42:29.349Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2023-07-07T17:42:29.349Z",
+        "firstPublishedAt": "2023-07-07T13:55:45.064Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "team"
+          }
+        }
+      },
+      "fields": {
+        "username": {
+          "en-US": "Naseem Khan"
+        },
+        "slug": {
+          "en-US": "naseem-khan"
+        },
+        "profilepic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2NuMBfnysLwRfwgqMTwTIS"
+            }
+          }
+        },
+        "role": {
+          "en-US": "Frontend Web Developer"
+        },
+        "bio": {
+          "en-US": "I specialize in crafting engaging UIs using HTML, CSS, and JS. Experienced in Tailwind CSS, Bootstrap, React, Next.js, and WordPress, I create responsive designs for seamless user experiences on various devices."
+        },
+        "facebook": {
+          "en-US": "https://www.facebook.com/profile.php?id=100017192357822"
+        },
+        "linkedinn": {
+          "en-US": "https://www.linkedin.com/in/naseem-khan-275275258/"
+        },
+        "github": {
+          "en-US": "https://github.com/NaseemKhan005"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6ngL6izGkh2YazsaGEKNWm",
+        "type": "Entry",
+        "createdAt": "2023-07-07T14:50:59.599Z",
+        "updatedAt": "2023-07-07T15:08:33.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-07T15:08:33.430Z",
+        "firstPublishedAt": "2023-07-07T14:51:10.947Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "billboard"
+          }
+        }
+      },
+      "fields": {
+        "description": {
+          "en-US": "Looking for a professional web designer and developer? We've got you covered. Our team of experts specializes in creating visually stunning and functional websites. From custom web applications to business websites, we can bring your vision to life. Enhance your online presence and drive success with our professional services. Contact us today for endless possibilities."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "55dgRRKgHAOB03mQyhrUAB"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6TnX3FNdAaAtBo7g0KQFc8",
+        "type": "Entry",
+        "createdAt": "2023-07-07T15:37:48.531Z",
+        "updatedAt": "2023-07-07T15:39:53.842Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-07-07T15:39:53.842Z",
+        "firstPublishedAt": "2023-07-07T15:39:35.237Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "worksamples"
+          }
+        }
+      },
+      "fields": {
+        "projectName": {
+          "en-US": "Adminto Dashboard Pannel"
+        },
+        "projectLink": {
+          "en-US": "https://shkwahab.github.io/adminto"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "72NP9SFzyd5fW8MxYu0rf0"
+            }
+          }
+        },
+        "shortDescription": {
+          "en-US": "Adminto is a feature-packed admin dashboard panel with various graphs. It utilizes JS, CSS, Bootstrap, and HTML to create a sleek and responsive interface. The template offers both light and dark themes for a visually appealing admin dashboard experience."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7mhuGMmmSEIuzMtjSycxFN",
+        "type": "Entry",
+        "createdAt": "2023-07-07T15:41:33.932Z",
+        "updatedAt": "2023-07-07T15:44:19.771Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2023-07-07T15:44:19.771Z",
+        "firstPublishedAt": "2023-07-07T15:44:19.771Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "worksamples"
+          }
+        }
+      },
+      "fields": {
+        "projectName": {
+          "en-US": "React Restuarant Site"
+        },
+        "projectLink": {
+          "en-US": "https://github.com/shkwahab/react"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2L6PAx18718VLzIgV3giQF"
+            }
+          }
+        },
+        "shortDescription": {
+          "en-US": "The React JS Restaurant Website is a responsive and visually appealing template designed for creating restaurant websites. Built using React JS, CSS3, and animations, it offers a bakery-themed design and seamless responsiveness."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3Ptp0CrGAiKjfmD7dIbVSx",
+        "type": "Entry",
+        "createdAt": "2023-07-07T16:55:56.905Z",
+        "updatedAt": "2023-07-07T17:00:56.422Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-07T17:00:56.422Z",
+        "firstPublishedAt": "2023-07-07T16:56:09.770Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "testimonial"
+          }
+        }
+      },
+      "fields": {
+        "customerName": {
+          "en-US": "Samuel Raita"
+        },
+        "customerRole": {
+          "en-US": "NextJs Blog"
+        },
+        "customerPic": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3gZPaReVBM4WPdMsluGzqd"
+            }
+          }
+        },
+        "review": {
+          "en-US": "A passionate Frontend Software Developer 🚀 having experience in designing and\nbuilding Web and Mobile applications with typescript and javascript / Reactjs / Nextjs / TailwindCss and some other cool libraries and frameworks"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6zlHSWoeSDXJhkzVlcUyr",
+        "type": "Entry",
+        "createdAt": "2023-07-07T17:47:25.270Z",
+        "updatedAt": "2023-07-09T11:03:13.770Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2023-07-09T11:03:13.770Z",
+        "firstPublishedAt": "2023-07-07T17:48:51.540Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Custom Blog"
+        },
+        "slug": {
+          "en-US": "custom-blog"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7sQgob1EzHeaeyUIsTsAJ"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Create a dynamic blog using Next.js, React.js, and WordPress. Benefit from Next.js performance, React.js interactivity, and WordPress CMS. Customize design, engage your audience, and establish a unique online presence."
+        },
+        "price": {
+          "en-US": 10
+        },
+        "cart": {
+          "en-US": "https://pay.sadapay.com/invoice/48aa8670-b46d-4344-be1f-a3fa93d352f4"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3wq2Di9yRTB0gfki94iPX3",
+        "type": "Entry",
+        "createdAt": "2023-07-07T17:57:57.386Z",
+        "updatedAt": "2023-07-09T11:03:23.971Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2023-07-09T11:03:23.971Z",
+        "firstPublishedAt": "2023-07-07T17:58:50.950Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "products"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Figma-Powered Designs"
+        },
+        "slug": {
+          "en-US": "figma-powered-designs"
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1XQzv6ojEF8bEIG9XZvb3i"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Create stunning UX/UI designs using Figma. Elevate user experiences with intuitive navigation, delightful interactions, and responsive layouts. Collaborate, iterate, and refine designs to captivate users and leave a lasting impression."
+        },
+        "price": {
+          "en-US": 200
+        },
+        "cart": {
+          "en-US": "https://pay.sadapay.com/invoice/48aa8670-b46d-4344-be1f-a3fa93d352f4"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4KFKjACMwcFrbBsNpJTV7H",
+        "type": "Entry",
+        "createdAt": "2023-07-10T10:57:45.092Z",
+        "updatedAt": "2023-07-11T09:34:31.046Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-11T09:34:31.046Z",
+        "firstPublishedAt": "2023-07-10T10:57:53.970Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dark Mode Nextjs"
+        },
+        "code": {
+          "en-US": "\"use client\"\nimport React, {FC} from 'react';\nimport RichText from \"@/app/components/RichText\";\ntype Article = {\ntitle: string;\ndescription: string;\nimage: string;\ndate: Date;\ncategory: string;\narticle: any;\n};\ninterface Props {\narticle: Article;\n}\nconst Article: FC<Props> = ({article}) => {\nconst splitTitle = (title: string) => {\nconst words = title.split(' ');\nif (words.length > 5) {\nconst firstLine = words.slice(0, 5).join(' ');\nconst remainingWords = words.slice(5).join(' ');\nreturn (\n                <>\n{firstLine}\n<span className={`block my-3`}>{remainingWords}</span>\n                </>\n            );\n}\nreturn title;\n};\nconst splitText = (title: string, maxWordsPerLine: number) => {\nconst words = title.split(' ');\nconst lines = [];\nlet line = '';\nfor (let i = 0; i < words.length; i++) {\nif ((line + words[i]).length > 0 && i !== 0 && i % maxWordsPerLine === 0) {\nlines.push(line.trim());\nline = '';\n}\nline += words[i] + ' ';\n}\nlines.push(line.trim());\nreturn lines.map((line, index) => (\n            <span className={`block special`} key={index}>\n{line}\n</span>\n        ));\n};\nconst code:string =\"<html></html>\"\nreturn (\n        <section id=\"article\">\n            <div className=\"relative\">\n                <img\nclassName=\"brightness-50 w-screen h-[400px] object-cover object-center\"\nsrc={article.image}\nalt={article.title}\n/>\n                <div className=\"absolute m-8 top-20\">\n                    <h3 className=\"text-sm sm:text-base my-2 text-gray-200 capitalize dark:text-gray-200\">\nPublished in {article.category}\n</h3>\n                    <h1 className=\"text-xl sm:text-2xl capitalize md:text-3xl text-white\">{splitTitle(article.title)}</h1>\n                    <p>{splitText(article.description, 12)}</p>\n                </div>\n            </div>\n            <div className=\"relative z-20 -top-10 bg-gray-200 dark:bg-gray-900 p-8 pr-2 rounded-md mx-4\">\n                <div className=\"grid md:grid-cols-[2fr_1fr] mx-4\">\n                    <div>\n                        <article>\n                            <RichText content={article.article} />\n                        </article>\n                    </div>\n                    <div>\n                        <section id=\"slider\">\n                        </section>\n                    </div>\n                </div>\n            </div>\n        </section>\n    );\n};\nexport default Article;"
+        },
+        "codetype": {
+          "en-US": "tsx"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "umO6Oj76S9Ojzxwfzfe2j",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:22:21.291Z",
+        "updatedAt": "2023-07-11T14:28:13.977Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 25,
+        "publishedAt": "2023-07-11T14:28:13.977Z",
+        "firstPublishedAt": "2023-07-11T14:26:28.438Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Setting Up Next Js Project using Npx"
+        },
+        "code": {
+          "en-US": "npx create-next-app@latest"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2g0l3f3dEudLquy6utA7MR",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:28:59.407Z",
+        "updatedAt": "2023-07-11T14:29:26.986Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-11T14:29:26.986Z",
+        "firstPublishedAt": "2023-07-11T14:29:26.986Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Next Project with Npm"
+        },
+        "code": {
+          "en-US": "yarn create next-app"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "5e7dbHtzm8WnO4t7Y9Z0Re",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:30:03.403Z",
+        "updatedAt": "2023-07-11T14:31:03.823Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2023-07-11T14:31:03.823Z",
+        "firstPublishedAt": "2023-07-11T14:31:03.823Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "next project initializtion"
+        },
+        "code": {
+          "en-US": "What is your project named?  my-app Would you like to use TypeScript?  No / Yes Would you like to use ESLint?  No / Yes Would you like to use Tailwind CSS?  No / Yes Would you like to use `src/` directory?  No / Yes Would you like to use App Router? (recommended)  No / Yes Would you like to customize the default import alias?  No / Yes"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "FHQOh7IdtYow1mChhxIoQ",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:35:09.912Z",
+        "updatedAt": "2023-07-11T14:35:28.197Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T14:35:28.197Z",
+        "firstPublishedAt": "2023-07-11T14:35:28.197Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Tailwind Config"
+        },
+        "code": {
+          "en-US": "/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  darkMode:\"class\",   // to enable dark mode add this line of code in your tailwind.config.js\n  content: [\n    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',\n    './src/components/**/*.{js,ts,jsx,tsx,mdx}',\n    './src/app/**/*.{js,ts,jsx,tsx,mdx}',\n  ],\n  theme: {\n    extend: {\n      backgroundImage: {\n        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',\n        'gradient-conic':\n          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',\n      },\n    },\n  },\n  plugins: [],\n}\n"
+        },
+        "codetype": {
+          "en-US": "js"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7ak97rs3KzdMO0fkjZqJdU",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:36:48.313Z",
+        "updatedAt": "2023-07-11T14:37:01.243Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T14:37:01.243Z",
+        "firstPublishedAt": "2023-07-11T14:37:01.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "next theme npm"
+        },
+        "code": {
+          "en-US": "npm i next-themes"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7InSHdm9ce5aohfd9uBaBZ",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:37:20.718Z",
+        "updatedAt": "2023-07-11T14:37:42.467Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-11T14:37:42.467Z",
+        "firstPublishedAt": "2023-07-11T14:37:42.467Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "next theme yarn"
+        },
+        "code": {
+          "en-US": "yarn add next-themes"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "5NT7HxUbrgpSTux5D4hfZU",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:41:55.233Z",
+        "updatedAt": "2023-07-11T15:24:50.863Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-11T15:24:50.863Z",
+        "firstPublishedAt": "2023-07-11T14:42:09.816Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Theme Provider"
+        },
+        "code": {
+          "en-US": "\"use client\"\nimport React, { FC, ReactNode, useEffect, useState } from 'react';\nimport { ThemeProvider as Theme } from 'next-themes';\n\ninterface Props {\n    children: ReactNode;\n}\n\nconst ThemeProvider: FC<Props> = ({ children }) => {\n    return (\n        <Theme attribute=\"class\">\n            {children}         \n        </Theme>\n    );\n};\n\nexport default ThemeProvider;"
+        },
+        "codetype": {
+          "en-US": "tsx"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "5llfnzKFAzPQ3jBLR5NDQ1",
+        "type": "Entry",
+        "createdAt": "2023-07-11T14:47:08.145Z",
+        "updatedAt": "2023-07-11T14:47:22.653Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T14:47:22.653Z",
+        "firstPublishedAt": "2023-07-11T14:47:22.653Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "layout.tsx"
+        },
+        "code": {
+          "en-US": "import './globals.css'\nimport ThemeProvider from \"@/app/components/ThemeProvider\";\nimport {ReactNode,FC} from \"react\";\nimport {Metadata} from \"next\";\nimport environments from \"@/app/environments\";\nexport const metadata: Metadata = {\n    title: 'Site Title',\n    description: 'Meta Description',\n\n}\n\n\ninterface Props{\n    children:ReactNode\n}\n\nconst RootLayout:FC<Props> =({children})=> {\n  return (\n    <html lang=\"en\" `}>\n      <body >\n      <ThemeProvider>\n      {children}\n      </ThemeProvider>\n      </body>\n    </html>\n  )\n}\nexport default RootLayout"
+        },
+        "codetype": {
+          "en-US": "tsx"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2bsW1zUmHIaZPYvvj28GFe",
+        "type": "Entry",
+        "createdAt": "2023-07-11T15:09:58.876Z",
+        "updatedAt": "2023-07-11T15:10:09.717Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T15:10:09.717Z",
+        "firstPublishedAt": "2023-07-11T15:10:09.717Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "global.css"
+        },
+        "code": {
+          "en-US": "@layer base{\n    body {\n        @apply dark:bg-gray-800 bg-white\n    }\n}"
+        },
+        "codetype": {
+          "en-US": "css"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4pmlXlSifbDHwNZkA2EH6t",
+        "type": "Entry",
+        "createdAt": "2023-07-11T15:11:55.123Z",
+        "updatedAt": "2023-07-11T15:12:36.578Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-11T15:12:36.578Z",
+        "firstPublishedAt": "2023-07-11T15:12:36.578Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dark Mode Toggle Button"
+        },
+        "code": {
+          "en-US": "\"use client\"\nimport React from 'react'\nimport { useTheme } from \"next-themes\";\n\n\nconst Button = () => {\n    const { systemTheme, theme, setTheme } = useTheme();\n    const currentTheme = theme === 'system' ? systemTheme : theme;\n\n    return (\n        <button\n            onClick={() => theme == \"dark\"? setTheme('light'): setTheme(\"dark\")}\n            className='bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg absolute bottom-32'>\n            Toggle Mode\n        </button>\n    )\n}\n\nexport default Button"
+        },
+        "codetype": {
+          "en-US": "tsx"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6epHHJASghvWmeSD0VIjoF",
+        "type": "Entry",
+        "createdAt": "2023-07-11T15:15:57.167Z",
+        "updatedAt": "2023-07-11T15:23:40.276Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2023-07-11T15:23:40.276Z",
+        "firstPublishedAt": "2023-07-11T15:16:38.187Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "togglebutton darkmode on page"
+        },
+        "code": {
+          "en-US": "<main >\n        <h2 >LIGHT MODE</h2>\n        <h2 >DARK MODE</h2>\n        <Button/>\n</main>"
+        },
+        "codetype": {
+          "en-US": "html"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6JF0MBYcAB37eCzhvgjDR8",
+        "type": "Entry",
+        "createdAt": "2023-07-11T16:10:57.617Z",
+        "updatedAt": "2023-07-11T16:20:05.583Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 23,
+        "publishedAt": "2023-07-11T16:20:05.583Z",
+        "firstPublishedAt": "2023-07-11T16:20:05.583Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blog"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "How to add custom icons to your next-app"
+        },
+        "slug": {
+          "en-US": "how-to-add-custom-icons-to-your-next-app"
+        },
+        "description": {
+          "en-US": "Icons are a big part of most websites/applications. So let's take a look at how we can use React icons in a Next.js project."
+        },
+        "featured": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6AdWFskrPFpfmDVyJxTn1X"
+            }
+          }
+        },
+        "article": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Icons are a big part of most websites/applications. So let's take a look at how we can use React icons in a Next.js project.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "React icons is one of the most popular icon libraries for React-based projects. It utilizes ES6 imports meaning we only load the icons we use!",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "We first have to add the package to our project by running the following command in your project folder to get started.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "7AVjrf9syJicZeTIHkaLiY",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Then we can get started by importing the icons. Head over to the ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://react-icons.github.io/react-icons"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "React icons website",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " and find the icon you would like to use (use the left-hand search).",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Then on the component we want to use the icon, we can import it like so:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "71GMKSBJhhseyHGzAJ3uQG",
+                      "type": "Link",
+                      "linkType": "Entry"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-entry-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "date": {
+          "en-US": "2023-07-11"
+        },
+        "categories": {
+          "en-US": [
+            "next.js"
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7AVjrf9syJicZeTIHkaLiY",
+        "type": "Entry",
+        "createdAt": "2023-07-11T16:17:19.757Z",
+        "updatedAt": "2023-07-11T16:17:32.085Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T16:17:32.085Z",
+        "firstPublishedAt": "2023-07-11T16:17:32.085Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "react icons"
+        },
+        "code": {
+          "en-US": "npm install react-icons --save"
+        },
+        "codetype": {
+          "en-US": "bash"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "71GMKSBJhhseyHGzAJ3uQG",
+        "type": "Entry",
+        "createdAt": "2023-07-11T16:18:03.024Z",
+        "updatedAt": "2023-07-11T16:18:21.493Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-11T16:18:21.493Z",
+        "firstPublishedAt": "2023-07-11T16:18:21.493Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "code"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "icon sample react icons"
+        },
+        "code": {
+          "en-US": "import { BsGrid3X3GapFill } from 'react-icons/bs';\n\n<button>\n  <BsGrid3X3GapFill />\n</button>;"
+        },
+        "codetype": {
+          "en-US": "tsx"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3RA4I6grZIKPK7EJ7jIWfh",
+        "type": "Asset",
+        "createdAt": "2023-07-02T13:28:13.176Z",
+        "updatedAt": "2023-07-04T12:14:25.615Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-04T12:14:25.615Z",
+        "firstPublishedAt": "2023-07-02T13:31:47.734Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Abdul Wahab"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/3RA4I6grZIKPK7EJ7jIWfh/9143b0464c8a56244fcda93c5d521283/me.jpeg",
+            "details": {
+              "size": 29318,
+              "image": {
+                "width": 460,
+                "height": 460
+              }
+            },
+            "fileName": "me.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "55dgRRKgHAOB03mQyhrUAB",
+        "type": "Asset",
+        "createdAt": "2023-07-07T09:26:59.325Z",
+        "updatedAt": "2023-07-07T09:28:42.513Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T09:28:42.513Z",
+        "firstPublishedAt": "2023-07-07T09:28:42.513Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Billboard 1"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/55dgRRKgHAOB03mQyhrUAB/68e32307ed9a0462e9b91f85ebb3da9e/billboard.jpg",
+            "details": {
+              "size": 56049,
+              "image": {
+                "width": 640,
+                "height": 427
+              }
+            },
+            "fileName": "billboard.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3KoUXWbIcMncmV48kdYMB0",
+        "type": "Asset",
+        "createdAt": "2023-07-07T15:19:38.524Z",
+        "updatedAt": "2023-07-07T15:20:17.663Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-07T15:20:17.663Z",
+        "firstPublishedAt": "2023-07-07T15:20:17.663Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Html Template"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/3KoUXWbIcMncmV48kdYMB0/bf6dfac7a1db769d317b0d2b4e4b5163/209405958-ca43163c-986c-4ce7-9585-b749867dfa1f.jpg",
+            "details": {
+              "size": 1263443,
+              "image": {
+                "width": 1024,
+                "height": 5203
+              }
+            },
+            "fileName": "209405958-ca43163c-986c-4ce7-9585-b749867dfa1f.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "72NP9SFzyd5fW8MxYu0rf0",
+        "type": "Asset",
+        "createdAt": "2023-07-07T15:38:28.290Z",
+        "updatedAt": "2023-07-07T15:39:13.509Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T15:39:13.509Z",
+        "firstPublishedAt": "2023-07-07T15:39:13.509Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Adminto"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/72NP9SFzyd5fW8MxYu0rf0/47c745a598c95f296552421d1c3500fb/209479434-76faa8ae-7654-46ad-83d7-2995f57aa6ad.jpg",
+            "details": {
+              "size": 297448,
+              "image": {
+                "width": 1024,
+                "height": 2984
+              }
+            },
+            "fileName": "209479434-76faa8ae-7654-46ad-83d7-2995f57aa6ad.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2L6PAx18718VLzIgV3giQF",
+        "type": "Asset",
+        "createdAt": "2023-07-07T15:42:03.696Z",
+        "updatedAt": "2023-07-07T15:42:32.226Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-07T15:42:32.226Z",
+        "firstPublishedAt": "2023-07-07T15:42:32.226Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "React Resturant King"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/2L6PAx18718VLzIgV3giQF/3ab80d6a7406eeb43f62d2b950f74c8b/209430511-44809ad4-ba79-4973-84e8-d29e713c205f.jpg",
+            "details": {
+              "size": 1487804,
+              "image": {
+                "width": 1024,
+                "height": 6396
+              }
+            },
+            "fileName": "209430511-44809ad4-ba79-4973-84e8-d29e713c205f.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "1Vx94uZ0NNJCdYMxk1p0FW",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:02:56.799Z",
+        "updatedAt": "2023-07-07T16:03:23.851Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-07T16:03:23.851Z",
+        "firstPublishedAt": "2023-07-07T16:03:23.851Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Landing Page"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/1Vx94uZ0NNJCdYMxk1p0FW/19003a41fdb3c72de7967292fadef20c/landingpage.jpg",
+            "details": {
+              "size": 267077,
+              "image": {
+                "width": 2416,
+                "height": 1624
+              }
+            },
+            "fileName": "landingpage.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7aiBQUXQ0qIASi3EnGrSjZ",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:11:25.669Z",
+        "updatedAt": "2023-07-07T16:12:50.897Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-07T16:12:50.897Z",
+        "firstPublishedAt": "2023-07-07T16:12:50.897Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sarah Josef"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/7aiBQUXQ0qIASi3EnGrSjZ/5e3ba72a7a529abfc3daa593b369d36c/sara.jpg",
+            "details": {
+              "size": 93955,
+              "image": {
+                "width": 640,
+                "height": 960
+              }
+            },
+            "fileName": "sara.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "4KoyLihiaFUVKR1V4iR2vx",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:24:10.050Z",
+        "updatedAt": "2023-07-07T16:24:36.507Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-07T16:24:36.507Z",
+        "firstPublishedAt": "2023-07-07T16:24:36.507Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Charolete"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/4KoyLihiaFUVKR1V4iR2vx/76e79f44676d67305ce8e7da23760b49/Charlotte.jpg",
+            "details": {
+              "size": 94791,
+              "image": {
+                "width": 640,
+                "height": 960
+              }
+            },
+            "fileName": "Charlotte.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3euNrBTEYQ2IwixNU7Ex4w",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:28:04.021Z",
+        "updatedAt": "2023-07-07T16:28:28.409Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T16:28:28.409Z",
+        "firstPublishedAt": "2023-07-07T16:28:28.409Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Charlie Green"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/3euNrBTEYQ2IwixNU7Ex4w/e36cdec58af7df09b84fde52b4c9046f/charlie_green.jpg",
+            "details": {
+              "size": 88305,
+              "image": {
+                "width": 640,
+                "height": 960
+              }
+            },
+            "fileName": "charlie green.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "1IwZP4GUDeIdSvEnePEUEA",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:36:26.165Z",
+        "updatedAt": "2023-07-07T16:36:50.846Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T16:36:50.846Z",
+        "firstPublishedAt": "2023-07-07T16:36:50.846Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Next Dark Mode"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/1IwZP4GUDeIdSvEnePEUEA/523e6bde7157b9e906141012de94b1dc/QYGs_fpp2.png",
+            "details": {
+              "size": 40624,
+              "image": {
+                "width": 1200,
+                "height": 630
+              }
+            },
+            "fileName": "QYGs_fpp2.png",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2rL4DXG3pLz9dEAG4atgYn",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:39:52.211Z",
+        "updatedAt": "2023-07-07T16:40:12.148Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T16:40:12.148Z",
+        "firstPublishedAt": "2023-07-07T16:40:12.148Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Next Dark Mode"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/2rL4DXG3pLz9dEAG4atgYn/c76f719628621f1cc74c888c46a4ff19/1_bKr4Z7UhRwJGXnVpJmlsqQ.png",
+            "details": {
+              "size": 175278,
+              "image": {
+                "width": 1400,
+                "height": 791
+              }
+            },
+            "fileName": "1*bKr4Z7UhRwJGXnVpJmlsqQ.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7yBaPdF8Ca3GsMaESHonMj",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:49:01.890Z",
+        "updatedAt": "2023-07-07T16:49:29.531Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T16:49:29.531Z",
+        "firstPublishedAt": "2023-07-07T16:49:29.531Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dark Mode"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/7yBaPdF8Ca3GsMaESHonMj/53386d4d9dd5b10f14e9fa2d024e77a9/DARK.jpg",
+            "details": {
+              "size": 91316,
+              "image": {
+                "width": 1280,
+                "height": 720
+              }
+            },
+            "fileName": "DARK.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "3gZPaReVBM4WPdMsluGzqd",
+        "type": "Asset",
+        "createdAt": "2023-07-07T16:59:18.276Z",
+        "updatedAt": "2023-07-07T16:59:37.292Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T16:59:37.292Z",
+        "firstPublishedAt": "2023-07-07T16:59:37.292Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Samuel Raitaa"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/3gZPaReVBM4WPdMsluGzqd/b533a56d09109c804a3e7162f0be94cd/Samuel_Raita.jpg",
+            "details": {
+              "size": 49131,
+              "image": {
+                "width": 640,
+                "height": 515
+              }
+            },
+            "fileName": "Samuel Raita.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2khtGIsXNdpTkCyp30ta8Z",
+        "type": "Asset",
+        "createdAt": "2023-07-07T17:03:35.999Z",
+        "updatedAt": "2023-07-10T07:08:04.555Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-10T07:08:04.555Z",
+        "firstPublishedAt": "2023-07-07T17:04:11.558Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "NEXT DARK"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/2khtGIsXNdpTkCyp30ta8Z/4c4d8d6f2675858458c82e812cdfdb3b/darkmode-slider-off-vector-buttons-neumorphic-style-light-day-dark-night-mode-switch-vector-illustration-eps-10_532800-108.jpg",
+            "details": {
+              "size": 18037,
+              "image": {
+                "width": 996,
+                "height": 498
+              }
+            },
+            "fileName": "darkmode-slider-off-vector-buttons-neumorphic-style-light-day-dark-night-mode-switch-vector-illustration-eps-10_532800-108.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "2NuMBfnysLwRfwgqMTwTIS",
+        "type": "Asset",
+        "createdAt": "2023-07-07T17:38:42.633Z",
+        "updatedAt": "2023-07-07T17:39:03.833Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T17:39:03.833Z",
+        "firstPublishedAt": "2023-07-07T17:39:03.833Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Naseem"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/2NuMBfnysLwRfwgqMTwTIS/435bffedb69a21ed7418afceb97da936/user.jpg",
+            "details": {
+              "size": 15946,
+              "image": {
+                "width": 315,
+                "height": 315
+              }
+            },
+            "fileName": "user.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "7sQgob1EzHeaeyUIsTsAJ",
+        "type": "Asset",
+        "createdAt": "2023-07-07T17:47:44.545Z",
+        "updatedAt": "2023-07-07T17:48:05.988Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T17:48:05.988Z",
+        "firstPublishedAt": "2023-07-07T17:48:05.988Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Blog"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/7sQgob1EzHeaeyUIsTsAJ/7f8826f3c3966a3eb064f14922e43d89/blog.jpg",
+            "details": {
+              "size": 525184,
+              "image": {
+                "width": 1000,
+                "height": 764
+              }
+            },
+            "fileName": "blog.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "1XQzv6ojEF8bEIG9XZvb3i",
+        "type": "Asset",
+        "createdAt": "2023-07-07T17:58:09.769Z",
+        "updatedAt": "2023-07-07T17:58:30.695Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-07T17:58:30.695Z",
+        "firstPublishedAt": "2023-07-07T17:58:30.695Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ux Ui "
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/1XQzv6ojEF8bEIG9XZvb3i/4f2b6ace59f0b4dc71823d2cdd845160/ux_ui_design.jpg",
+            "details": {
+              "size": 488101,
+              "image": {
+                "width": 1000,
+                "height": 667
+              }
+            },
+            "fileName": "ux ui design.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "5c3PcvB4WK9mRr9JKzme1",
+        "type": "Asset",
+        "createdAt": "2023-07-09T15:24:49.615Z",
+        "updatedAt": "2023-07-09T18:40:22.987Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-09T18:40:22.987Z",
+        "firstPublishedAt": "2023-07-09T18:40:22.987Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Video sample"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//videos.ctfassets.net/space_id/5c3PcvB4WK9mRr9JKzme1/e304bbdb7c5441eeec74fe8c35af0a15/1436675885.mp4",
+            "details": {
+              "size": 1358286
+            },
+            "fileName": "1436675885.mp4",
+            "contentType": "video/mp4"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6nlj2o1Omsr9S45VZaUylu",
+        "type": "Asset",
+        "createdAt": "2023-07-11T14:13:51.805Z",
+        "updatedAt": "2023-07-11T14:21:28.809Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-11T14:21:28.809Z",
+        "firstPublishedAt": "2023-07-11T14:14:18.123Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dark Mode"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/6nlj2o1Omsr9S45VZaUylu/5305b0b03f3201f714c5e7de08f201a1/cj38r8spyet3lhinrqs5.gif",
+            "details": {
+              "size": 732740,
+              "image": {
+                "width": 880,
+                "height": 465
+              }
+            },
+            "fileName": "cj38r8spyet3lhinrqs5.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "id": "6AdWFskrPFpfmDVyJxTn1X",
+        "type": "Asset",
+        "createdAt": "2023-07-11T16:14:29.734Z",
+        "updatedAt": "2023-07-11T16:15:09.153Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-11T16:15:09.153Z",
+        "firstPublishedAt": "2023-07-11T16:15:09.153Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "react icons"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/space_id/6AdWFskrPFpfmDVyJxTn1X/6fe16c0d564aa87f9dfafdbdb77fd4c3/2ucc7xyvobyaypil1b77.jpg",
+            "details": {
+              "size": 33554,
+              "image": {
+                "width": 1000,
+                "height": 420
+              }
+            },
+            "fileName": "2ucc7xyvobyaypil1b77.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "3OwuN7IdcHM0mLeNaJoJKZ",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "618f4541-bf9c-4b8f-b2e2-277c34d99bcb"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "createdAt": "2023-07-02T13:01:31Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedAt": "2023-07-02T13:01:31Z"
+      }
+    }
+  ],
+  "webhooks": [
+    {
+      "name": "Vercel - Deploy a site",
+      "url": "https://api.vercel.com/v1/integrations/deploy/prj_j7QencznaOApu6J8fV6eqHpPE4cs/DiXIKM4MQq",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.publish",
+        "Entry.unpublish",
+        "Entry.delete",
+        "Asset.publish",
+        "Asset.unpublish",
+        "Asset.delete"
+      ],
+      "filters": [
+        {
+          "equals": [
+            {
+              "doc": "sys.environment.sys.id"
+            },
+            "master"
+          ]
+        }
+      ],
+      "transformation": {
+        "contentType": "application/json"
+      },
+      "active": true,
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "4hFvV4iGagKhGOgAHBZnbJ",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "createdAt": "2023-07-07T15:04:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedAt": "2023-07-07T15:06:23Z"
+      },
+      "headers": [
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3OWmsFKm9rsZ4U6ggpysG9",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "createdAt": "2023-07-02T13:01:32Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedAt": "2023-07-02T13:01:32Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3OXVK58NfMi6xXXJo8zNOt",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "createdAt": "2023-07-02T13:01:32Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedAt": "2023-07-02T13:01:32Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "3OZknRMiR6VRjfi2kAu4YZ",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "use your own space id"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "createdAt": "2023-07-02T13:01:32Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3If1npUja6C4E3ULxKjqvP"
+          }
+        },
+        "updatedAt": "2023-07-02T13:01:32Z"
+      }
+    }
+  ]
+}

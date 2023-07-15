@@ -2,46 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,h2,h3,span,p,li,button{
+/* scrollbar.css */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #dedcdc;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7d7c7c;
+    border-radius: 5px;
+    height: 200px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7d7c7c;
+}
+
+h1, h2, h3, span, p, li, button {
     @apply dark:text-white
 }
-code span{
+
+code span {
     font-family: var(--font-Poppins)
 }
-.service-h1{
-   font-family: var(--font-Poppins)
- }
-body,h3,span.special,li,a,Link{
-   font-family: var(--font-Poppins)
+
+.service-h1 {
+    font-family: var(--font-Poppins)
 }
-span.special{
+
+body, h3, span.special, li, a, Link {
+    font-family: var(--font-Poppins)
+}
+
+span.special {
     @apply text-white !important
 }
-pre{
+
+pre {
     @apply dark:bg-transparent
 }
-body{
-    @apply  dark:bg-blue-950;
+
+body {
+    @apply dark:bg-blue-950;
 }
-.bg-primary{
+
+.bg-primary {
     @apply bg-blue-600 dark:bg-blue-400
 }
-h1,h2,span{
+
+h1, h2, span {
     font-family: var(--font-Roboto);
 }
-.bg-dark{
+
+.bg-dark {
     @apply dark:bg-gray-900
 }
-.bg-light{
+
+.bg-light {
     @apply bg-blue-600
 }
-.bg-buttonLight{
+
+.bg-buttonLight {
     @apply bg-blue-500
 }
-.bg-buttonDark{
+
+.bg-buttonDark {
     @apply dark:bg-blue-900
 }
-.text-primaryColor{
+
+.text-primaryColor {
     @apply text-blue-600 dark:text-blue-500
 }
 

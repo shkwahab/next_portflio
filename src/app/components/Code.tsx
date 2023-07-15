@@ -7,6 +7,7 @@ import {AiOutlineCheck} from 'react-icons/ai'
 interface Props {
     code: string;
     codetype:string
+
     backgroundColor: string;
 }
 const Code: FC<Props> = ({code, backgroundColor,codetype}) => {

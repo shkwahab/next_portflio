@@ -7,6 +7,7 @@ const FetchDataLimited=async (contentType:string,limit:number)=>{
     return response.items;
 }
 
+
 const FetchData=async (contentType:string)=>{
     const response  = await  client.getEntries({
         content_type:contentType,
