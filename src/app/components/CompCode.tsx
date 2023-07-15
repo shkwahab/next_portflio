@@ -75,19 +75,19 @@ const CompCode: FC<Props> = ({Navbar}) => {
                 </div>
             </div>
             {Navbar.map((item, index) => {
-                return <div key={item.id} className={`my-12`}>
+                return <div key={item.id} className={`my-12 `}>
                     <div className={`  w-10/12 mx-auto `}>
                         <div
-                            className="p-4 flex rounded-t-md border  border-gray-400  justify-center">
+                            className="p-4 flex dark:bg-white  rounded-t-md border  border-gray-400  justify-center">
                             <button onClick={() => {
                                 toggleActiveFalse(index)
                             }}
-                                    className={`bg-gray-200 ${active[index] ? "" : "text-primaryColor"} mx-4 p-2 rounded-md  text-lg sm:text-xl`}>Preview
+                                    className={`bg-gray-200 ${active[index] ? "dark:text-black" : "text-primaryColor"}  mx-4 p-2 rounded-md  text-lg sm:text-xl`}>Preview
                             </button>
                             <button onClick={() => {
                                 toggleActive(index)
                             }}
-                                    className={`bg-gray-200 ${active[index] ? "text-primaryColor" : ""} mx-4 p-2 rounded-md  text-lg sm:text-xl`}>React
+                                    className={`bg-gray-200 ${active[index] ? "text-primaryColor" : "dark:text-black"}  mx-4 p-2 rounded-md  text-lg sm:text-xl`}>React
                             </button>
                         </div>
                         <div className={`${active[index] ? "hidden" : "block"}`}>
