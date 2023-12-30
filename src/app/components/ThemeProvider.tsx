@@ -74,7 +74,8 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
     return (
 
         <Theme attribute="class">
-            <Navbar
+            {company && (
+                 <Navbar
                 siteTitle={company.name}
                 category={[
                     {
@@ -99,6 +100,8 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
                     },
                 ]}
             />
+            )}
+           
 
             {children}
             {company && (
