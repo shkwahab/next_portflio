@@ -6,7 +6,7 @@ import {Roboto_Serif} from "next/font/google";
 import {Metadata} from "next";
 import environments from "@/app/environments";
 export const metadata: Metadata = {
-    title: 'Code Brothers',
+    title: 'Elit Solutions',
     description: 'Developers Community',
 
 }
