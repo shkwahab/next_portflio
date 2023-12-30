@@ -26,7 +26,7 @@ const Footer: FC<Props> = ({siteTitle, socialIcons}) => {
                     &copy;
                     {`${new Date().getFullYear()} ${siteTitle} — `}
                     <Link href={socialIcons.linkedin} className="dark:text-white text-gray-600 ml-1" rel="noopener noreferrer"
-                          target="_blank">@code_brothers</Link>
+                          target="_blank">@shkwahab</Link>
                 </p>
                 <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                     <Link href={socialIcons.linkedin}>
