@@ -75,7 +75,7 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
 
         <Theme attribute="class">
             <Navbar
-                siteTitle="Code Brothers"
+                siteTitle={company.name}
                 category={[
                     {
                         id: '1',
