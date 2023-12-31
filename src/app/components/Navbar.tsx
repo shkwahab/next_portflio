@@ -45,10 +45,10 @@ const Navbar: FC<Categories> = ({category, siteTitle}) => {
 
                     </nav>
                     <div className="md:flex md:static order-3 absolute right-4 md:flex-row">
-                        <button className={`     bg-primary rounded-full p-2 `} onClick={() => {
+                        <button className={`     bg-light sm:bg-transparent sm:p-0 rounded-full p-2 `} onClick={() => {
                             theme == "dark" ? setTheme('light') : setTheme("dark")
                         }}>
-                            <CiDark className={`text-xl sm:text-2xl text-white  dark:text-white`}/>
+                            <CiDark className={`text-xl sm:text-2xl text-white sm:text-black  dark:text-white`}/>
                         </button>
                         <button className={` md:hidden ml-4  bg-primary rounded-full p-2 `} onClick={MobiBtn}>
                             <IoReorderThreeSharp className={`text-xl sm:text-2xl text-white  dark:text-white`}/>

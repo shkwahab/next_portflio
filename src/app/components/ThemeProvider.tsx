@@ -3,6 +3,7 @@ import React, { FC, ReactNode, useEffect, useState } from 'react';
 import { ThemeProvider as Theme } from 'next-themes';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
+import Loader from './Loader';
 
 interface Props {
     children: ReactNode;
@@ -60,7 +61,7 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
         };
         fetchData();
 
-// alert(testResult)
+        // alert(testResult)
     }, [SPACE_ID, DELIVERY_TOKEN]);
 
 
@@ -74,43 +75,45 @@ const ThemeProvider: FC<Props> = ({ children, SPACE_ID, DELIVERY_TOKEN }) => {
     return (
 
         <Theme attribute="class">
-            {company && (
-                 <Navbar
-                siteTitle={company.name}
-                category={[
-                    {
-                        id: '1',
-                        title: 'Blog',
-                        href: '/blog',
-                    },
-                    {
-                        id: '2',
-                        title: 'Portfolio',
-                        href: '/portfolio',
-                    },
-                    {
-                        id: '3',
-                        title: 'Services',
-                        href: '/services',
-                    },
-                    {
-                        id: '4',
-                        title: 'Themes',
-                        href: '/themes',
-                    },
-                ]}
-            />
-            )}
-           
+            {company ? <React.Fragment>
+                <Navbar
+                    siteTitle={company.name}
+                    category={[
+                        {
+                            id: '1',
+                            title: 'Blog',
+                            href: '/blog',
+                        },
+                        {
+                            id: '2',
+                            title: 'Portfolio',
+                            href: '/portfolio',
+                        },
+                        {
+                            id: '3',
+                            title: 'Services',
+                            href: '/services',
+                        },
+                        {
+                            id: '4',
+                            title: 'Themes',
+                            href: '/themes',
+                        },
+                    ]}
+                />
 
-            {children}
-            {company && (
+
+
+                {children}
+
                 <Footer
                     siteTitle={company.name}
                     socialIcons={socialIcons}
 
                 />
-            )}
+            </React.Fragment>
+                : <Loader/>}
+
         </Theme>
 
     );

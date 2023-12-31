@@ -30,7 +30,7 @@ const Team: FC<Props> = ({team}, element: JSX.Element = <><>
                 <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Empowering businesses with innovative web solutions, our dynamic team of expert developers and designers combine cutting-edge technologies, captivating designs, and flawless functionality to create immersive digital experiences that engage, inspire, and drive success in the online realm.</p>
             </div>
 
-            <div className="flex flex-wrap -m-4">
+            <div className="flex md:flex-row flex-col space-y-8 flex-wrap -m-4">
                 {team.map((team) => {
                     return <div key={team.id} className="p-4 lg:w-1/2">
                         <div

@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { FC ,useState} from 'react';
 import {RxCross1} from "react-icons/rx"
 type Service = {
@@ -59,11 +60,14 @@ const closed=()=>{
                                 </div>
                             </div>
                             <div className="flex">
-                                <span className="title-font font-medium text-2xl text-gray-900">${service.price}</span>
-                                <button onClick={handlePurchase}
+                                {/* <span className="title-font font-medium text-2xl text-gray-900">${service.price}</span> */}
+                                {/* <button onClick={handlePurchase}
                                         className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy
                                     Now
-                                </button>
+                                </button> */}
+                                <Link href={`/#contact`}
+                                        className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Contact Us
+                                </Link>
 
                             </div>
                         </div>
